@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Administrator/Desktop/esp32/xlabhomework/main
+# Install script for directory: C:/Users/Administrator/Desktop/esp32/xlabbighomework/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

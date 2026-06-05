@@ -6,8 +6,8 @@ set(requires
 
 idf_component_register(SRCS
                        main.cc
-                       led.h
-                       led.cc
+                       gpio.h
+                       gpio.cc
                        init.h
                        uart.h
                        uart.cc

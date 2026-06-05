@@ -34,12 +34,10 @@ void uart_echo_task(void *pvParameters)
             
             //uart_write_bytes(UART_NUM, (const char *)data, len);// 将收到的数据原样发送回电脑串口
             if(data[0] == '1'){
-                gpio_set_level(GPIO_NUM_13, 1);
-                gpio_set_level(GPIO_NUM_25, 0);
+                gpio_set_level(GPIO_NUM_4, 1);
             }
-            else if(data[0] == '2'){
-                gpio_set_level(GPIO_NUM_13, 0);
-                gpio_set_level(GPIO_NUM_25, 1);
+            else if(data[0] == '0'){
+                gpio_set_level(GPIO_NUM_4, 0);
             }
         }
         

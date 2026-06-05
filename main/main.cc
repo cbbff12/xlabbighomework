@@ -1,4 +1,5 @@
 
+#include "soc/gpio_num.h"
 extern "C"
 {
 #include <stdio.h>
@@ -9,7 +10,7 @@ extern "C"
 #include "driver/ledc.h"  
 #include "esp_log.h"          
 }
-//#include "led.h"//在stepper.h中包含
+//#include "gpio.h"//在stepper.h中包含
 #include "uart.h"
 #include "stepper.h"
 #include "oled.h"
@@ -26,6 +27,11 @@ extern "C" void app_main(void)
     led_init(GPIO_NUM_26);
     led_init(GPIO_NUM_27);
     led_init(GPIO_NUM_25);
+    led_init(GPIO_NUM_4);
+    button_init(GPIO_NUM_36);
+    button_init(GPIO_NUM_35);
+    button_init(GPIO_NUM_34);
+    button_init(GPIO_NUM_39);
     stepper_init();
     i2c_master_init();
     oled_init();
@@ -40,30 +46,25 @@ extern "C" void app_main(void)
     }
     oled_write_cmd(0xAF);
 
-    led_config led1_config = {
-        .gpio_num = GPIO_NUM_12,
-        .time = 400,
-        .delay = 0,
-    };
-    led_config led2_config = {
-        .gpio_num = GPIO_NUM_14,
-        .time = 400,
-        .delay = 100,
-    };
-    led_config led3_config = {
-        .gpio_num = GPIO_NUM_27,
-        .time = 400,
-        .delay = 200,
-    };
-    led_config led4_config = {
-        .gpio_num = GPIO_NUM_26,
-        .time = 400,
-        .delay = 300,
-    };
-    led_config stepper_config = {//这里传参数复用了led_config结构体，只有.delay字段有作用，表示循环圈数。其他无意义。
-        .gpio_num = GPIO_NUM_21,
+    led_config led_open = {
+        .gpio_num = GPIO_NUM_39,
         .time = 0,
-        .delay = 512,
+        .ledctrl = 1,
+    };
+    led_config led_close = {
+        .gpio_num = GPIO_NUM_39,
+        .time = 0,
+        .ledctrl = 0,
+    };
+    led_config led_use = {
+        .gpio_num = GPIO_NUM_39,
+        .time = 0,
+        .ledctrl = 2,
+    };
+    led_config stepper_config1 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
+        .gpio_num = GPIO_NUM_21,
+        .time = 21191805,
+        .ledctrl = 512,
     };
     uart_config_t uart_config = {
         .baud_rate = 115200,                    // 波特率
@@ -79,20 +80,18 @@ extern "C" void app_main(void)
 
     ESP_LOGI(TAG, "Hello World!");
     printf("Hello World from ESP32!\n");
-    xTaskCreate(led_task, "led1", 2048, (void *)&led1_config, 1, NULL);//创建闪灯任务
-    xTaskCreate(led_task, "led2", 2048, (void *)&led2_config, 1, NULL);
-    xTaskCreate(led_task, "led3", 2048, (void *)&led3_config, 1, NULL);
-    xTaskCreate(led_task, "led4", 2048, (void *)&led4_config, 1, NULL);
-    //xTaskCreate(led_control, "led_control", 2048, NULL, 10, NULL);//led控制任务
+    gpio_install_isr_service(0);
+
+    xTaskCreate(led_task, "led_task", 2048, (void *)&led_open, 10, NULL);
+    
+
     xTaskCreate(uart_echo_task, "uart_echo_task", 4096, NULL, 5, NULL);//串口任务
-    gpio_set_level(GPIO_NUM_13, 0);
-    gpio_set_level(GPIO_NUM_25, 0);
 
     xTaskCreate(video_player_task, "video_player", 8192, NULL, 5, NULL);//视频播放任务
 
-    xTaskCreate(step_forward, "step_forward", 4096, (void *)&stepper_config, 5, NULL);
+    xTaskCreate(step_forward, "step_forward", 4096, (void *)&stepper_config1, 5, NULL);
     vTaskDelay(pdMS_TO_TICKS(10000));
-    xTaskCreate(step_backward, "step_backward", 4096, (void *)&stepper_config, 5, NULL);
+    //xTaskCreate(step_backward, "step_backward", 4096, (void *)&stepper_config, 5, NULL);
     //xTaskCreate(oled_test_pattern, "video_player", 8192, NULL, 5, NULL);
     
     while (1) {
