@@ -17,9 +17,9 @@ extern "C"
 
 extern "C" void app_main(void)
 {
-    //初始化
+    //初始化b
     //esp_task_wdt_deinit();
-
+    /*
     led_init(GPIO_NUM_2);
     led_init(GPIO_NUM_13);
     led_init(GPIO_NUM_12);
@@ -27,6 +27,7 @@ extern "C" void app_main(void)
     led_init(GPIO_NUM_26);
     led_init(GPIO_NUM_27);
     led_init(GPIO_NUM_25);
+    */
     led_init(GPIO_NUM_4);
     button_init(GPIO_NUM_36);
     button_init(GPIO_NUM_35);
@@ -63,6 +64,16 @@ extern "C" void app_main(void)
     };
     led_config stepper_config1 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
         .gpio_num = GPIO_NUM_21,
+        .time = 32332526,
+        .ledctrl = 512,
+    };
+    led_config stepper_config2 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
+        .gpio_num = GPIO_NUM_21,
+        .time = 27141213,
+        .ledctrl = 512,
+    };
+    led_config stepper_config3 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
+        .gpio_num = GPIO_NUM_21,
         .time = 21191805,
         .ledctrl = 512,
     };
@@ -90,6 +101,10 @@ extern "C" void app_main(void)
     xTaskCreate(video_player_task, "video_player", 8192, NULL, 5, NULL);//视频播放任务
 
     xTaskCreate(step_forward, "step_forward", 4096, (void *)&stepper_config1, 5, NULL);
+    vTaskDelay(pdMS_TO_TICKS(10000));
+    xTaskCreate(step_forward, "step_forward", 4096, (void *)&stepper_config2, 5, NULL);
+    vTaskDelay(pdMS_TO_TICKS(10000));
+    xTaskCreate(step_forward, "step_forward", 4096, (void *)&stepper_config3, 5, NULL);
     vTaskDelay(pdMS_TO_TICKS(10000));
     //xTaskCreate(step_backward, "step_backward", 4096, (void *)&stepper_config, 5, NULL);
     //xTaskCreate(oled_test_pattern, "video_player", 8192, NULL, 5, NULL);
