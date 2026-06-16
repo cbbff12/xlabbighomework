@@ -15,6 +15,10 @@ idf_component_register(SRCS
                        stepper.cc
                        oled.h
                        oled.cc
+                       esp32_screen.h
+                       esp32_screen.cc
+                       wifi.h
+                       wifi.cc
 
 
 batch/A_0001.c

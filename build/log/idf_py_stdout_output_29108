@@ -1,0 +1,479 @@
+Command: ninja all
+[1/13] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Administrator\Desktop\esp32\xlabbighomework\build && C:\Users\Administrator\.espressif\python_env\idf5.5_py3.14_env\Scripts\python.exe C:/esp/v5.5.4/esp-idf/components/spiffs/spiffsgen.py 0x19000 C:/Users/Administrator/Desktop/esp32/xlabbighomework/spiffs_data C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/spiffs.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
+[2/13] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\bootloader\esp-idf\esptool_py && C:\Users\Administrator\.espressif\python_env\idf5.5_py3.14_env\Scripts\python.exe C:/esp/v5.5.4/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6630 bytes. 0x9d0 bytes (9%) free.
+[3/13] No install step for 'bootloader'
+[4/13] Completed 'bootloader'
+[5/13] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/esp32_screen.cc.obj
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.cc:3:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void oled_init2()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:129:5: warning: missing initializer for member 'i2c_config_t::clk_flags' [-Wmissing-field-initializers]
+  129 |     };
+      |     ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void switch_to_next_wifi()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::ssid' [-Wmissing-field-initializers]
+  208 |     };
+      |     ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::password' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::scan_method' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::bssid_set' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::bssid' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::channel' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::listen_interval' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::sort_method' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_scan_threshold_t::rssi' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_scan_threshold_t::rssi_5g_adjustment' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::pmf_cfg' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::rm_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::btm_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::mbo_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::ft_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::owe_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::transition_disable' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::reserved1' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::sae_pwe_h2e' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::sae_pk_mode' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::failure_retry_cnt' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_set' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_max_constellation_tx' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_max_constellation_rx' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_mcs9_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_su_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_su_bmforming_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_mu_bmforming_partial_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_cqi_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::vht_su_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::vht_mu_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::vht_mcs8_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::reserved2' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::sae_h2e_identifier' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'esp_err_t wifi_init_sta()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::ssid' [-Wmissing-field-initializers]
+  282 |     };
+      |     ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::password' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::scan_method' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::bssid_set' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::bssid' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::channel' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::listen_interval' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::sort_method' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_scan_threshold_t::rssi' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_scan_threshold_t::rssi_5g_adjustment' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::pmf_cfg' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::rm_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::btm_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::mbo_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::ft_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::owe_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::transition_disable' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::reserved1' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::sae_pwe_h2e' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::sae_pk_mode' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::failure_retry_cnt' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_set' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_max_constellation_tx' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_max_constellation_rx' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_mcs9_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_su_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_su_bmforming_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_mu_bmforming_partial_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_cqi_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::vht_su_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::vht_mu_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::vht_mcs8_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::reserved2' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::sae_h2e_identifier' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: At global scope:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:67:13: warning: 'wifi_connecting' defined but not used [-Wunused-variable]
+   67 | static bool wifi_connecting = false;
+      |             ^~~~~~~~~~~~~~~
+[6/13] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/gpio.cc.obj
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:16,
+                 from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.cc:1:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void oled_init2()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:129:5: warning: missing initializer for member 'i2c_config_t::clk_flags' [-Wmissing-field-initializers]
+  129 |     };
+      |     ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void switch_to_next_wifi()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::ssid' [-Wmissing-field-initializers]
+  208 |     };
+      |     ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::password' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::scan_method' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::bssid_set' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::bssid' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::channel' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::listen_interval' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::sort_method' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_scan_threshold_t::rssi' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_scan_threshold_t::rssi_5g_adjustment' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::pmf_cfg' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::rm_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::btm_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::mbo_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::ft_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::owe_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::transition_disable' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::reserved1' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::sae_pwe_h2e' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::sae_pk_mode' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::failure_retry_cnt' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_set' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_max_constellation_tx' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_max_constellation_rx' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_mcs9_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_su_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_su_bmforming_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_mu_bmforming_partial_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_cqi_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::vht_su_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::vht_mu_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::vht_mcs8_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::reserved2' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::sae_h2e_identifier' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'esp_err_t wifi_init_sta()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::ssid' [-Wmissing-field-initializers]
+  282 |     };
+      |     ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::password' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::scan_method' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::bssid_set' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::bssid' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::channel' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::listen_interval' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::sort_method' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_scan_threshold_t::rssi' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_scan_threshold_t::rssi_5g_adjustment' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::pmf_cfg' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::rm_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::btm_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::mbo_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::ft_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::owe_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::transition_disable' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::reserved1' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::sae_pwe_h2e' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::sae_pk_mode' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::failure_retry_cnt' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_set' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_max_constellation_tx' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_max_constellation_rx' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_mcs9_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_su_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_su_bmforming_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_mu_bmforming_partial_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_cqi_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::vht_su_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::vht_mu_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::vht_mcs8_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::reserved2' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::sae_h2e_identifier' [-Wmissing-field-initializers]
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:17:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h: In function 'void oled_test_pattern(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4482:13: warning: variable 'test_buffer' set but not used [-Wunused-but-set-variable]
+ 4482 |     uint8_t test_buffer[1024];
+      |             ^~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void button_isr_handler(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:65:9: warning: unused variable 'time' [-Wunused-variable]
+   65 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:66:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   66 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void led_task(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:73:9: warning: unused variable 'time' [-Wunused-variable]
+   73 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:74:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+   74 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void screen_button_task(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:109:9: warning: unused variable 'time' [-Wunused-variable]
+  109 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:110:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+  110 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.cc: At global scope:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.cc:4:44: warning: ignoring attribute 'section (".iram1.1")' because it conflicts with previous 'section (".iram1.0")' [-Wattributes]
+    4 | void IRAM_ATTR button_isr_handler(void* arg);
+      |                                            ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:62:16: note: previous declaration here
+   62 | void IRAM_ATTR button_isr_handler(void *pvParameters)
+      |                ^~~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:67:13: warning: 'wifi_connecting' defined but not used [-Wunused-variable]
+   67 | static bool wifi_connecting = false;
+      |             ^~~~~~~~~~~~~~~
+[7/13] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/stepper.cc.obj
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:16,
+                 from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h:8,
+                 from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.cc:1:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void oled_init2()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:129:5: warning: missing initializer for member 'i2c_config_t::clk_flags' [-Wmissing-field-initializers]
+  129 |     };
+      |     ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void switch_to_next_wifi()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::ssid' [-Wmissing-field-initializers]
+  208 |     };
+      |     ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::password' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::scan_method' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::bssid_set' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::bssid' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::channel' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::listen_interval' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::sort_method' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_scan_threshold_t::rssi' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_scan_threshold_t::rssi_5g_adjustment' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::pmf_cfg' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::rm_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::btm_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::mbo_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::ft_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::owe_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::transition_disable' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::reserved1' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::sae_pwe_h2e' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::sae_pk_mode' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::failure_retry_cnt' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_set' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_max_constellation_tx' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_max_constellation_rx' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_mcs9_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_su_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_su_bmforming_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_mu_bmforming_partial_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_cqi_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::vht_su_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::vht_mu_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::vht_mcs8_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::reserved2' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::sae_h2e_identifier' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'esp_err_t wifi_init_sta()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::ssid' [-Wmissing-field-initializers]
+  282 |     };
+      |     ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::password' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::scan_method' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::bssid_set' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::bssid' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::channel' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::listen_interval' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::sort_method' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_scan_threshold_t::rssi' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_scan_threshold_t::rssi_5g_adjustment' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::pmf_cfg' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::rm_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::btm_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::mbo_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::ft_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::owe_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::transition_disable' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::reserved1' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::sae_pwe_h2e' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::sae_pk_mode' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::failure_retry_cnt' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_set' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_max_constellation_tx' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_max_constellation_rx' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_mcs9_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_su_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_su_bmforming_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_mu_bmforming_partial_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_cqi_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::vht_su_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::vht_mu_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::vht_mcs8_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::reserved2' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::sae_h2e_identifier' [-Wmissing-field-initializers]
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:17:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h: In function 'void oled_test_pattern(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4482:13: warning: variable 'test_buffer' set but not used [-Wunused-but-set-variable]
+ 4482 |     uint8_t test_buffer[1024];
+      |             ^~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void button_isr_handler(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:65:9: warning: unused variable 'time' [-Wunused-variable]
+   65 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:66:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   66 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void led_task(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:73:9: warning: unused variable 'time' [-Wunused-variable]
+   73 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:74:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+   74 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void screen_button_task(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:109:9: warning: unused variable 'time' [-Wunused-variable]
+  109 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:110:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+  110 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h: In function 'void step_forward(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h:38:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   38 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h: In function 'void step_backward(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h:95:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   95 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: At global scope:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:67:13: warning: 'wifi_connecting' defined but not used [-Wunused-variable]
+   67 | static bool wifi_connecting = false;
+      |             ^~~~~~~~~~~~~~~
+[8/13] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cc.obj
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:16,
+                 from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h:8,
+                 from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:15:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void oled_init2()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:129:5: warning: missing initializer for member 'i2c_config_t::clk_flags' [-Wmissing-field-initializers]
+  129 |     };
+      |     ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void switch_to_next_wifi()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::ssid' [-Wmissing-field-initializers]
+  208 |     };
+      |     ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::password' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::scan_method' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::bssid_set' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::bssid' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::channel' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::listen_interval' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::sort_method' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_scan_threshold_t::rssi' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_scan_threshold_t::rssi_5g_adjustment' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::pmf_cfg' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::rm_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::btm_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::mbo_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::ft_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::owe_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::transition_disable' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::reserved1' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::sae_pwe_h2e' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::sae_pk_mode' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::failure_retry_cnt' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_set' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_max_constellation_tx' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_max_constellation_rx' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_mcs9_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_su_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_su_bmforming_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_mu_bmforming_partial_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_cqi_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::vht_su_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::vht_mu_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::vht_mcs8_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::reserved2' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:208:5: warning: missing initializer for member 'wifi_sta_config_t::sae_h2e_identifier' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'esp_err_t wifi_init_sta()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::ssid' [-Wmissing-field-initializers]
+  282 |     };
+      |     ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::password' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::scan_method' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::bssid_set' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::bssid' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::channel' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::listen_interval' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::sort_method' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_scan_threshold_t::rssi' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_scan_threshold_t::rssi_5g_adjustment' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::pmf_cfg' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::rm_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::btm_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::mbo_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::ft_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::owe_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::transition_disable' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::reserved1' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::sae_pwe_h2e' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::sae_pk_mode' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::failure_retry_cnt' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_set' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_max_constellation_tx' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_dcm_max_constellation_rx' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_mcs9_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_su_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_su_bmforming_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_mu_bmforming_partial_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::he_trig_cqi_feedback_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::vht_su_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::vht_mu_beamformee_disabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::vht_mcs8_enabled' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::reserved2' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:282:5: warning: missing initializer for member 'wifi_sta_config_t::sae_h2e_identifier' [-Wmissing-field-initializers]
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:17:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h: In function 'void oled_test_pattern(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4482:13: warning: variable 'test_buffer' set but not used [-Wunused-but-set-variable]
+ 4482 |     uint8_t test_buffer[1024];
+      |             ^~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void button_isr_handler(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:65:9: warning: unused variable 'time' [-Wunused-variable]
+   65 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:66:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   66 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void led_task(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:73:9: warning: unused variable 'time' [-Wunused-variable]
+   73 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:74:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+   74 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void screen_button_task(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:109:9: warning: unused variable 'time' [-Wunused-variable]
+  109 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:110:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+  110 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h: In function 'void step_forward(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h:38:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   38 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h: In function 'void step_backward(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h:95:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   95 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc: In function 'void app_main()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:87:5: warning: missing initializer for member 'uart_config_t::rx_flow_ctrl_thresh' [-Wmissing-field-initializers]
+   87 |     };
+      |     ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:87:5: warning: missing initializer for member 'uart_config_t::flags' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:55:16: warning: unused variable 'led_close' [-Wunused-variable]
+   55 |     led_config led_close = {
+      |                ^~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:60:16: warning: unused variable 'led_use' [-Wunused-variable]
+   60 |     led_config led_use = {
+      |                ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:65:16: warning: unused variable 'stepper_config1' [-Wunused-variable]
+   65 |     led_config stepper_config1 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
+      |                ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:70:16: warning: unused variable 'stepper_config2' [-Wunused-variable]
+   70 |     led_config stepper_config2 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
+      |                ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:75:16: warning: unused variable 'stepper_config3' [-Wunused-variable]
+   75 |     led_config stepper_config3 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
+      |                ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: At global scope:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:67:13: warning: 'wifi_connecting' defined but not used [-Wunused-variable]
+   67 | static bool wifi_connecting = false;
+      |             ^~~~~~~~~~~~~~~
+[9/13] Linking C static library esp-idf\main\libmain.a
+[10/13] Generating esp-idf/esp_system/ld/sections.ld
+[11/13] Linking CXX executable xlabhomework1.elf
+[12/13] Generating binary image from built executable
+esptool.py v4.12.dev1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/xlabhomework1.bin
+[13/13] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\esp-idf\esptool_py && C:\Users\Administrator\.espressif\python_env\idf5.5_py3.14_env\Scripts\python.exe C:/esp/v5.5.4/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/partition_table/partition-table.bin C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/xlabhomework1.bin"
+xlabhomework1.bin binary size 0xc37a0 bytes. Smallest app partition is 0x3b6000 bytes. 0x2f2860 bytes (79%) free.

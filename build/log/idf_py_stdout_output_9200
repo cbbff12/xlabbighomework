@@ -1,0 +1,40 @@
+Command: ninja flash
+[1/13] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Administrator\Desktop\esp32\xlabbighomework\build && C:\Users\Administrator\.espressif\python_env\idf5.5_py3.14_env\Scripts\python.exe C:/esp/v5.5.4/esp-idf/components/spiffs/spiffsgen.py 0x19000 C:/Users/Administrator/Desktop/esp32/xlabbighomework/spiffs_data C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/spiffs.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
+[2/13] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\bootloader\esp-idf\esptool_py && C:\Users\Administrator\.espressif\python_env\idf5.5_py3.14_env\Scripts\python.exe C:/esp/v5.5.4/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6630 bytes. 0x9d0 bytes (9%) free.
+[3/13] No install step for 'bootloader'
+[4/13] Completed 'bootloader'
+[5/13] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/gpio.cc.obj
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:17,
+                 from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.cc:1:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h: In function 'void oled_test_pattern(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4482:13: warning: variable 'test_buffer' set but not used [-Wunused-but-set-variable]
+ 4482 |     uint8_t test_buffer[1024];
+      |             ^~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void button_isr_handler(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:65:9: warning: unused variable 'time' [-Wunused-variable]
+   65 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:66:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   66 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void led_task(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:73:9: warning: unused variable 'time' [-Wunused-variable]
+   73 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:74:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+   74 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void screen_button_task(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:109:9: warning: unused variable 'time' [-Wunused-variable]
+  109 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:110:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+  110 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.cc: At global scope:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.cc:4:44: warning: ignoring attribute 'section (".iram1.1")' because it conflicts with previous 'section (".iram1.0")' [-Wattributes]
+    4 | void IRAM_ATTR button_isr_handler(void* arg);
+      |                                            ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:62:16: note: previous declaration here

@@ -1,0 +1,22 @@
+Command: C:\Users\Administrator\.espressif\python_env\idf5.5_py3.14_env\Scripts\python.exe -m esp_idf_diag create --no-hints --force-terminal --project-dir C:\Users\Administrator\Desktop\esp32\xlabbighomework --build-dir C:\Users\Administrator\Desktop\esp32\xlabbighomework\build --output idf-diag-6baed095-92a1-4549-82a7-8c7d2da0d1b2
+Creating report in "idf-diag-6baed095-92a1-4549-82a7-8c7d2da0d1b2" directory.
+Searching for device serial port ...
+Serial port: N/A
+warning: The device serial port is unavailable. Target information will not be gathered.
+warning: File "C:\Users\Administrator\Desktop\esp32\xlabbighomework/dependencies.lock" does not exist: [Errno 2] No such file or directory: 'C:\\Users\\Administrator\\Desktop\\esp32\\xlabbighomework/dependencies.lock'
+warning: No files matching glob "idf_component.yml" found in "C:\Users\Administrator\Desktop\esp32\xlabbighomework"
+error: Failed to search for the regex "^Command: ninja all$" in "C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\log\idf_py_stdout_output_13520": 'gbk' codec can't decode byte 0x82 in position 2758: illegal multibyte sequence
+error: Failed to search for the regex "^Command: ninja all$" in "C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\log\idf_py_stdout_output_17616": 'gbk' codec can't decode byte 0x82 in position 2758: illegal multibyte sequence
+error: Failed to search for the regex "^Command: ninja all$" in "C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\log\idf_py_stdout_output_28920": 'gbk' codec can't decode byte 0x82 in position 2758: illegal multibyte sequence
+error: Failed to search for the regex "^Command: ninja all$" in "C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\log\idf_py_stdout_output_29328": 'gbk' codec can't decode byte 0x82 in position 2758: illegal multibyte sequence
+error: Failed to search for the regex "^Command: ninja flash$" in "C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\log\idf_py_stdout_output_13520": 'gbk' codec can't decode byte 0x82 in position 2758: illegal multibyte sequence
+error: Failed to search for the regex "^Command: ninja flash$" in "C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\log\idf_py_stdout_output_17616": 'gbk' codec can't decode byte 0x82 in position 2758: illegal multibyte sequence
+error: Failed to search for the regex "^Command: ninja flash$" in "C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\log\idf_py_stdout_output_28920": 'gbk' codec can't decode byte 0x82 in position 2758: illegal multibyte sequence
+error: Failed to search for the regex "^Command: ninja flash$" in "C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\log\idf_py_stdout_output_29328": 'gbk' codec can't decode byte 0x82 in position 2758: illegal multibyte sequence
+error: Failed to search for the regex "^Command: .*idf_monitor.py.*$" in "C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\log\idf_py_stdout_output_13520": 'gbk' codec can't decode byte 0x82 in position 2758: illegal multibyte sequence
+error: Failed to search for the regex "^Command: .*idf_monitor.py.*$" in "C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\log\idf_py_stdout_output_17616": 'gbk' codec can't decode byte 0x82 in position 2758: illegal multibyte sequence
+error: Failed to search for the regex "^Command: .*idf_monitor.py.*$" in "C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\log\idf_py_stdout_output_28920": 'gbk' codec can't decode byte 0x82 in position 2758: illegal multibyte sequence
+error: Failed to search for the regex "^Command: .*idf_monitor.py.*$" in "C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\log\idf_py_stdout_output_29328": 'gbk' codec can't decode byte 0x82 in position 2758: illegal multibyte sequence
+warning: No files with content matching regex "^Command: .*idf_monitor.py.*$" found in "C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\log"
+warning: No files with content matching regex "^Command: .*idf_monitor.py.*$" found in "C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\log"
+The report has been created in the "idf-diag-6baed095-92a1-4549-82a7-8c7d2da0d1b2" directory.

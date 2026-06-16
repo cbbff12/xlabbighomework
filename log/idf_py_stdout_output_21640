@@ -1,0 +1,1 @@
+Command: C:\Users\Administrator\.espressif\python_env\idf5.5_py3.14_env\Scripts\python.exe -m esp_idf_diag create --no-hints --force-terminal --project-dir C:\Users\Administrator\Desktop\esp32\xlabbighomework --build-dir C:\Users\Administrator\Desktop\esp32\xlabbighomework\build --output idf-diag-56fd3f99-ab74-4b3f-8e6d-582bab17d63a

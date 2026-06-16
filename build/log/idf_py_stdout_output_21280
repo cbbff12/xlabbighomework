@@ -1,0 +1,156 @@
+Command: ninja flash
+[1/11] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Administrator\Desktop\esp32\xlabbighomework\build && C:\Users\Administrator\.espressif\python_env\idf5.5_py3.14_env\Scripts\python.exe C:/esp/v5.5.4/esp-idf/components/spiffs/spiffsgen.py 0x19000 C:/Users/Administrator/Desktop/esp32/xlabbighomework/spiffs_data C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/spiffs.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
+[2/11] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\bootloader\esp-idf\esptool_py && C:\Users\Administrator\.espressif\python_env\idf5.5_py3.14_env\Scripts\python.exe C:/esp/v5.5.4/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6630 bytes. 0x9d0 bytes (9%) free.
+[3/11] No install step for 'bootloader'
+[4/11] Completed 'bootloader'
+[5/11] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cc.obj
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:17,
+                 from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:13:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h: In function 'void oled_test_pattern(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4482:13: warning: variable 'test_buffer' set but not used [-Wunused-but-set-variable]
+ 4482 |     uint8_t test_buffer[1024];
+      |             ^~~~~~~~~~~
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:18:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h: In function 'void step_forward(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h:54:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   54 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h: In function 'void step_backward(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h:111:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+  111 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void button_isr_handler(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:47:9: warning: unused variable 'time' [-Wunused-variable]
+   47 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:48:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   48 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void led_task(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:55:9: warning: unused variable 'time' [-Wunused-variable]
+   55 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:56:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+   56 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void screen_button_task(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:91:9: warning: unused variable 'time' [-Wunused-variable]
+   91 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:92:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+   92 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void button_task1(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:165:9: warning: unused variable 'time' [-Wunused-variable]
+  165 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:166:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+  166 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc: In function 'void app_main()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:69:5: warning: missing initializer for member 'uart_config_t::rx_flow_ctrl_thresh' [-Wmissing-field-initializers]
+   69 |     };
+      |     ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:69:5: warning: missing initializer for member 'uart_config_t::flags' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:56:16: warning: unused variable 'led_use' [-Wunused-variable]
+   56 |     led_config led_use = {
+      |                ^~~~~~~
+[6/11] Linking C static library esp-idf\main\libmain.a
+[7/11] Generating esp-idf/esp_system/ld/sections.ld
+[8/11] Linking CXX executable xlabhomework1.elf
+[9/11] Generating binary image from built executable
+esptool.py v4.12.dev1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/xlabhomework1.bin
+[10/11] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\esp-idf\esptool_py && C:\Users\Administrator\.espressif\python_env\idf5.5_py3.14_env\Scripts\python.exe C:/esp/v5.5.4/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/partition_table/partition-table.bin C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/xlabhomework1.bin"
+xlabhomework1.bin binary size 0x2e3c50 bytes. Smallest app partition is 0x3b6000 bytes. 0xd23b0 bytes (22%) free.
+[10/11] C:\Windows\system32\cmd.exe /C "cd /D C:\esp\v5.5.4\esp-idf\components\esptool_py && C:\Users\Administrator\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/esp/v5.5.4/esp-idf -D SERIAL_TOOL=C:/Users/Administrator/.espressif/python_env/idf5.5_py3.14_env/Scripts/python.exe;;C:/esp/v5.5.4/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/Administrator/Desktop/esp32/xlabbighomework/build -P C:/esp/v5.5.4/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM13 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x20000 xlabhomework1.bin 0x8000 partition_table/partition-table.bin 0x11000 ota_data_initial.bin 0x3d6000 spiffs.bin
+esptool.py v4.12.dev1
+Serial port COM13
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 8c:94:df:93:df:dc
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00020000 to 0x00303fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x00011000 to 0x00012fff...
+Flash will be erased from 0x003d6000 to 0x003eefff...
+SHA digest in image updated
+Compressed 26160 bytes to 16518...
+Writing at 0x00001000... (50 %)
+Writing at 0x00007572... (100 %)
+Wrote 26160 bytes (16518 compressed) at 0x00001000 in 0.9 seconds (effective 241.3 kbit/s)...
+Hash of data verified.
+Compressed 3030096 bytes to 677090...
+Writing at 0x00020000... (2 %)
+Writing at 0x0002c8b4... (4 %)
+Writing at 0x00059135... (7 %)
+Writing at 0x00093288... (9 %)
+Writing at 0x000be4f6... (11 %)
+Writing at 0x000ebc28... (14 %)
+Writing at 0x0012317a... (16 %)
+Writing at 0x0015a32a... (19 %)
+Writing at 0x00190b88... (21 %)
+Writing at 0x001c708e... (23 %)
+Writing at 0x001fdb9e... (26 %)
+Writing at 0x002384b8... (28 %)
+Writing at 0x00252610... (30 %)
+Writing at 0x0025c26a... (33 %)
+Writing at 0x00264239... (35 %)
+Writing at 0x00269cdb... (38 %)
+Writing at 0x0026fea7... (40 %)
+Writing at 0x002757e3... (42 %)
+Writing at 0x0027b340... (45 %)
+Writing at 0x0028105c... (47 %)
+Writing at 0x00286b07... (50 %)
+Writing at 0x0028caab... (52 %)
+Writing at 0x00292a9b... (54 %)
+Writing at 0x00298e05... (57 %)
+Writing at 0x0029e3c7... (59 %)
+Writing at 0x002a373a... (61 %)
+Writing at 0x002a9434... (64 %)
+Writing at 0x002aeef3... (66 %)
+Writing at 0x002b4769... (69 %)
+Writing at 0x002ba06b... (71 %)
+Writing at 0x002bfdf5... (73 %)
+Writing at 0x002c5805... (76 %)
+Writing at 0x002cb3c7... (78 %)
+Writing at 0x002d1068... (80 %)
+Writing at 0x002d6929... (83 %)
+Writing at 0x002ddded... (85 %)
+Writing at 0x002e4fe8... (88 %)
+Writing at 0x002eae25... (90 %)
+Writing at 0x002f0a78... (92 %)
+Writing at 0x002f65ef... (95 %)
+Writing at 0x002fc52b... (97 %)
+Writing at 0x00301990... (100 %)
+Wrote 3030096 bytes (677090 compressed) at 0x00020000 in 28.3 seconds (effective 857.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 135...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (135 compressed) at 0x00008000 in 0.1 seconds (effective 262.3 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x00011000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x00011000 in 0.1 seconds (effective 472.7 kbit/s)...
+Hash of data verified.
+Compressed 102400 bytes to 276...
+Writing at 0x003d6000... (100 %)
+Wrote 102400 bytes (276 compressed) at 0x003d6000 in 1.1 seconds (effective 777.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

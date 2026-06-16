@@ -10,24 +10,15 @@ extern "C"
 #include "driver/ledc.h"  
 #include "esp_log.h"          
 }
-//#include "gpio.h"//在stepper.h中包含
+#include "gpio.h"
 #include "uart.h"
-#include "stepper.h"
-#include "oled.h"
+
+#include <nvs_flash.h>
+
 
 extern "C" void app_main(void)
 {
-    //初始化b
-    //esp_task_wdt_deinit();
-    /*
-    led_init(GPIO_NUM_2);
-    led_init(GPIO_NUM_13);
-    led_init(GPIO_NUM_12);
-    led_init(GPIO_NUM_14);
-    led_init(GPIO_NUM_26);
-    led_init(GPIO_NUM_27);
-    led_init(GPIO_NUM_25);
-    */
+
     led_init(GPIO_NUM_4);
     button_init(GPIO_NUM_36);
     button_init(GPIO_NUM_35);
@@ -52,8 +43,18 @@ extern "C" void app_main(void)
         .time = 0,
         .ledctrl = 1,
     };
-    led_config led_close = {
-        .gpio_num = GPIO_NUM_39,
+    led_config GPIO36 = {
+        .gpio_num = GPIO_NUM_36,
+        .time = 0,
+        .ledctrl = 0,
+    };
+    led_config GPIO34 = {
+        .gpio_num = GPIO_NUM_34,
+        .time = 0,
+        .ledctrl = 0,
+    };
+    led_config GPIO35 = {
+        .gpio_num = GPIO_NUM_35,
         .time = 0,
         .ledctrl = 0,
     };
@@ -62,21 +63,7 @@ extern "C" void app_main(void)
         .time = 0,
         .ledctrl = 2,
     };
-    led_config stepper_config1 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
-        .gpio_num = GPIO_NUM_21,
-        .time = 32332526,
-        .ledctrl = 512,
-    };
-    led_config stepper_config2 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
-        .gpio_num = GPIO_NUM_21,
-        .time = 27141213,
-        .ledctrl = 512,
-    };
-    led_config stepper_config3 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
-        .gpio_num = GPIO_NUM_21,
-        .time = 21191805,
-        .ledctrl = 512,
-    };
+
     uart_config_t uart_config = {
         .baud_rate = 115200,                    // 波特率
         .data_bits = UART_DATA_8_BITS,          // 8位数据
@@ -88,27 +75,34 @@ extern "C" void app_main(void)
     ESP_ERROR_CHECK(uart_param_config(UART_NUM, &uart_config));
     ESP_ERROR_CHECK(uart_set_pin(UART_NUM, TXD_PIN, RXD_PIN, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE));
     ESP_ERROR_CHECK(uart_driver_install(UART_NUM, BUF_SIZE, BUF_SIZE, 0, NULL, 0));
+    esp_err_t ret = nvs_flash_init();
+    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
+        ESP_ERROR_CHECK(nvs_flash_erase());
+        ret = nvs_flash_init();
+    }
+    ESP_ERROR_CHECK(ret);
+    wifi_init_sta();
+    
+    
+
 
     ESP_LOGI(TAG, "Hello World!");
     printf("Hello World from ESP32!\n");
+    oled_display_text("ESP32 Screen", "Multi-WiFi v1.0");
     gpio_install_isr_service(0);
 
     xTaskCreate(led_task, "led_task", 2048, (void *)&led_open, 10, NULL);
-    
+    xTaskCreate(screen_button_task, "oled_task", 2048, (void *)&GPIO36, 10, NULL);
 
-    xTaskCreate(uart_echo_task, "uart_echo_task", 4096, NULL, 5, NULL);//串口任务
+    xTaskCreate(uart_echo_task, "uart_echo_task", 2048, NULL, 5, NULL);//串口任务
 
-    xTaskCreate(video_player_task, "video_player", 8192, NULL, 5, NULL);//视频播放任务
+    //xTaskCreate(tcp_client_task, "tcp_client", 8192, NULL, 5, NULL);
+    //xTaskCreate(video_player_task, "video_player", 8192, NULL, 5, NULL);//视频播放任务
+    xTaskCreate(button_task1, "button_task1", 2048, &GPIO34, 5, NULL);//按钮任务
+    xTaskCreate(button_task2, "button_task2", 2048, &GPIO35, 5, NULL);//按钮任务
 
-    xTaskCreate(step_forward, "step_forward", 4096, (void *)&stepper_config1, 5, NULL);
-    vTaskDelay(pdMS_TO_TICKS(10000));
-    xTaskCreate(step_forward, "step_forward", 4096, (void *)&stepper_config2, 5, NULL);
-    vTaskDelay(pdMS_TO_TICKS(10000));
-    xTaskCreate(step_forward, "step_forward", 4096, (void *)&stepper_config3, 5, NULL);
-    vTaskDelay(pdMS_TO_TICKS(10000));
-    //xTaskCreate(step_backward, "step_backward", 4096, (void *)&stepper_config, 5, NULL);
-    //xTaskCreate(oled_test_pattern, "video_player", 8192, NULL, 5, NULL);
-    
+
+
     while (1) {
         vTaskDelay(pdMS_TO_TICKS(100));
     

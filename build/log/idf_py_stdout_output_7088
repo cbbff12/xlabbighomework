@@ -1,0 +1,260 @@
+Command: ninja flash
+[1/12] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Administrator\Desktop\esp32\xlabbighomework\build && C:\Users\Administrator\.espressif\python_env\idf5.5_py3.14_env\Scripts\python.exe C:/esp/v5.5.4/esp-idf/components/spiffs/spiffsgen.py 0x19000 C:/Users/Administrator/Desktop/esp32/xlabbighomework/spiffs_data C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/spiffs.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
+[2/12] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\bootloader\esp-idf\esptool_py && C:\Users\Administrator\.espressif\python_env\idf5.5_py3.14_env\Scripts\python.exe C:/esp/v5.5.4/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6630 bytes. 0x9d0 bytes (9%) free.
+[3/12] No install step for 'bootloader'
+[4/12] Completed 'bootloader'
+[5/12] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/wifi.cc.obj
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.cc:3:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h: In function 'void start_wifi_sta()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::password' [-Wmissing-field-initializers]
+   84 |     wifi_config_t wifi_config = {0};
+      |                                   ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::ssid_len' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::channel' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::authmode' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::ssid_hidden' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::max_connection' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::beacon_interval' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::csa_count' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::dtim_period' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::pairwise_cipher' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::ftm_responder' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::pmf_cfg' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::sae_pwe_h2e' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::transition_disable' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::sae_ext' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::bss_max_idle_cfg' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::gtk_rekey_interval' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h: In function 'void start_softap_and_http()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::password' [-Wmissing-field-initializers]
+  145 |     wifi_config_t ap_config = {0};  // 全部清零
+      |                                 ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::ssid_len' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::channel' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::authmode' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::ssid_hidden' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::max_connection' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::beacon_interval' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::csa_count' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::dtim_period' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::pairwise_cipher' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::ftm_responder' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::pmf_cfg' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::sae_pwe_h2e' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::transition_disable' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::sae_ext' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::bss_max_idle_cfg' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::gtk_rekey_interval' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:166:9: warning: missing initializer for member 'httpd_uri::user_ctx' [-Wmissing-field-initializers]
+  166 |         };
+      |         ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:171:9: warning: missing initializer for member 'httpd_uri::user_ctx' [-Wmissing-field-initializers]
+  171 |         };
+      |         ^
+[6/12] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cc.obj
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:16,
+                 from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h:8,
+                 from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:15:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void oled_init2()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:129:5: warning: missing initializer for member 'i2c_config_t::clk_flags' [-Wmissing-field-initializers]
+  129 |     };
+      |     ^
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:17:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h: In function 'void oled_test_pattern(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4482:13: warning: variable 'test_buffer' set but not used [-Wunused-but-set-variable]
+ 4482 |     uint8_t test_buffer[1024];
+      |             ^~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void button_isr_handler(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:66:9: warning: unused variable 'time' [-Wunused-variable]
+   66 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:67:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   67 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void led_task(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:74:9: warning: unused variable 'time' [-Wunused-variable]
+   74 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:75:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+   75 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void screen_button_task(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:110:9: warning: unused variable 'time' [-Wunused-variable]
+  110 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:111:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+  111 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h: In function 'void step_forward(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h:38:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   38 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h: In function 'void step_backward(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h:95:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   95 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:17:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h: In function 'void start_wifi_sta()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::password' [-Wmissing-field-initializers]
+   84 |     wifi_config_t wifi_config = {0};
+      |                                   ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::ssid_len' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::channel' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::authmode' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::ssid_hidden' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::max_connection' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::beacon_interval' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::csa_count' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::dtim_period' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::pairwise_cipher' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::ftm_responder' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::pmf_cfg' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::sae_pwe_h2e' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::transition_disable' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::sae_ext' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::bss_max_idle_cfg' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:84:35: warning: missing initializer for member 'wifi_ap_config_t::gtk_rekey_interval' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h: In function 'void start_softap_and_http()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::password' [-Wmissing-field-initializers]
+  145 |     wifi_config_t ap_config = {0};  // 全部清零
+      |                                 ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::ssid_len' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::channel' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::authmode' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::ssid_hidden' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::max_connection' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::beacon_interval' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::csa_count' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::dtim_period' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::pairwise_cipher' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::ftm_responder' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::pmf_cfg' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::sae_pwe_h2e' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::transition_disable' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::sae_ext' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::bss_max_idle_cfg' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:145:33: warning: missing initializer for member 'wifi_ap_config_t::gtk_rekey_interval' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:166:9: warning: missing initializer for member 'httpd_uri::user_ctx' [-Wmissing-field-initializers]
+  166 |         };
+      |         ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/wifi.h:171:9: warning: missing initializer for member 'httpd_uri::user_ctx' [-Wmissing-field-initializers]
+  171 |         };
+      |         ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc: In function 'void app_main()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:78:5: warning: missing initializer for member 'uart_config_t::rx_flow_ctrl_thresh' [-Wmissing-field-initializers]
+   78 |     };
+      |     ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:78:5: warning: missing initializer for member 'uart_config_t::flags' [-Wmissing-field-initializers]
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:51:16: warning: unused variable 'led_use' [-Wunused-variable]
+   51 |     led_config led_use = {
+      |                ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: At global scope:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:67:13: warning: 'wifi_connecting' defined but not used [-Wunused-variable]
+   67 | static bool wifi_connecting = false;
+      |             ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:66:12: warning: 'retry_count' defined but not used [-Wunused-variable]
+   66 | static int retry_count = 0;
+      |            ^~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:65:12: warning: 'current_wifi_index' defined but not used [-Wunused-variable]
+   65 | static int current_wifi_index = 0;      // 当前尝试的WiFi索引
+      |            ^~~~~~~~~~~~~~~~~~
+[7/12] Linking C static library esp-idf\main\libmain.a
+[8/12] Generating esp-idf/esp_system/ld/sections.ld
+[9/12] Linking CXX executable xlabhomework1.elf
+[10/12] Generating binary image from built executable
+esptool.py v4.12.dev1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/xlabhomework1.bin
+[11/12] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\esp-idf\esptool_py && C:\Users\Administrator\.espressif\python_env\idf5.5_py3.14_env\Scripts\python.exe C:/esp/v5.5.4/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/partition_table/partition-table.bin C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/xlabhomework1.bin"
+xlabhomework1.bin binary size 0x2edb90 bytes. Smallest app partition is 0x3b6000 bytes. 0xc8470 bytes (21%) free.
+[11/12] C:\Windows\system32\cmd.exe /C "cd /D C:\esp\v5.5.4\esp-idf\components\esptool_py && C:\Users\Administrator\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/esp/v5.5.4/esp-idf -D SERIAL_TOOL=C:/Users/Administrator/.espressif/python_env/idf5.5_py3.14_env/Scripts/python.exe;;C:/esp/v5.5.4/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/Administrator/Desktop/esp32/xlabbighomework/build -P C:/esp/v5.5.4/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM13 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x20000 xlabhomework1.bin 0x8000 partition_table/partition-table.bin 0x11000 ota_data_initial.bin 0x3d6000 spiffs.bin
+esptool.py v4.12.dev1
+Serial port COM13
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 8c:94:df:93:df:dc
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00020000 to 0x0030dfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x00011000 to 0x00012fff...
+Flash will be erased from 0x003d6000 to 0x003eefff...
+SHA digest in image updated
+Compressed 26160 bytes to 16518...
+Writing at 0x00001000... (50 %)
+Writing at 0x00007572... (100 %)
+Wrote 26160 bytes (16518 compressed) at 0x00001000 in 0.9 seconds (effective 241.5 kbit/s)...
+Hash of data verified.
+Compressed 3070864 bytes to 700632...
+Writing at 0x00020000... (2 %)
+Writing at 0x0002cb9e... (4 %)
+Writing at 0x00054abc... (6 %)
+Writing at 0x000907cf... (9 %)
+Writing at 0x000bd34b... (11 %)
+Writing at 0x000e8f29... (13 %)
+Writing at 0x00120147... (16 %)
+Writing at 0x001569a0... (18 %)
+Writing at 0x0018a8ae... (20 %)
+Writing at 0x001c3ec7... (23 %)
+Writing at 0x001fa344... (25 %)
+Writing at 0x002328aa... (27 %)
+Writing at 0x00253920... (30 %)
+Writing at 0x0025c8b5... (32 %)
+Writing at 0x002648c4... (34 %)
+Writing at 0x0026a4dc... (37 %)
+Writing at 0x00270573... (39 %)
+Writing at 0x002760b1... (41 %)
+Writing at 0x0027bacd... (44 %)
+Writing at 0x002816cf... (46 %)
+Writing at 0x0028738c... (48 %)
+Writing at 0x0028d2f4... (51 %)
+Writing at 0x002932f1... (53 %)
+Writing at 0x00298ea4... (55 %)
+Writing at 0x0029f0a8... (58 %)
+Writing at 0x002a4647... (60 %)
+Writing at 0x002a9ea7... (62 %)
+Writing at 0x002afb95... (65 %)
+Writing at 0x002b53ec... (67 %)
+Writing at 0x002baa02... (69 %)
+Writing at 0x002c04e7... (72 %)
+Writing at 0x002c6451... (74 %)
+Writing at 0x002cbd4e... (76 %)
+Writing at 0x002d1a7f... (79 %)
+Writing at 0x002d7c88... (81 %)
+Writing at 0x002dd683... (83 %)
+Writing at 0x002e3a4e... (86 %)
+Writing at 0x002ebec5... (88 %)
+Writing at 0x002f1a15... (90 %)
+Writing at 0x002f82ba... (93 %)
+Writing at 0x002fdca9... (95 %)
+Writing at 0x003040b1... (97 %)
+Writing at 0x003094da... (100 %)
+Wrote 3070864 bytes (700632 compressed) at 0x00020000 in 29.0 seconds (effective 845.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 135...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (135 compressed) at 0x00008000 in 0.1 seconds (effective 326.2 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x00011000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x00011000 in 0.2 seconds (effective 433.7 kbit/s)...
+Hash of data verified.
+Compressed 102400 bytes to 276...
+Writing at 0x003d6000... (100 %)
+Wrote 102400 bytes (276 compressed) at 0x003d6000 in 1.0 seconds (effective 791.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

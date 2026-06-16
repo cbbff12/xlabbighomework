@@ -1,0 +1,9 @@
+serverAddr = "150.158.144.241"
+serverPort = 7000
+auth.token = "666777888"
+[[proxies]]
+name = "oled_server"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 20500
+remotePort = 20500

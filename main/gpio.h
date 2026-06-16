@@ -6,39 +6,29 @@ extern "C"
 #include <stdlib.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "freertos/event_groups.h"
 #include "driver/gpio.h"    
 #include "esp_log.h"    
 #include <string.h>                  
+#include <nvs_flash.h>
 }
 #include "init.h"
-typedef struct {
-    gpio_num_t gpio_num;
-    int time; //延迟
-    int ledctrl;//0:关闭 1:打开 2:无
-} led_config;
+#include "esp32_screen.h"
+#include "oled.h"
+#include "stepper.h"
+TaskHandle_t Task1 = NULL;
+TaskHandle_t Task2 = NULL;
+
+
 #define LED_GPIO GPIO_NUM_2
-#define DEBOUNCE_DELAY_MS  50// 按钮消抖延时（毫秒）
+#define DEBOUNCE_DELAY_MS  101// 按钮消抖延时（毫秒）
 
 static int led_state = 0;
+static int oled_state = 0;
 static bool last_button_state = true; 
 
-void led_init(gpio_num_t num)//设置为输出模式，函数名懒得改了
-{
-    // 配置GPIO为输出模式
-    gpio_config_t io_conf = {
-        .pin_bit_mask = (1ULL << num),  // 选择要配置的GPIO引脚
-        .mode = GPIO_MODE_OUTPUT,            // 设置为输出模式
-        .pull_up_en = GPIO_PULLUP_DISABLE,   // 启用内部上拉电阻
-        .pull_down_en = GPIO_PULLDOWN_DISABLE, // 禁用下拉电阻
-        .intr_type = GPIO_INTR_DISABLE       // 禁用中断
-    };
-    
-    // 应用GPIO配置
-    gpio_config(&io_conf);
-    
-    // 初始状态设置为低电平（LED关闭）
-    gpio_set_level(num, 0);
-}
+
+
 void button_init(gpio_num_t num)//设置为输入模式
 {
     // 配置GPIO为输入模式
@@ -70,17 +60,17 @@ void led_task(void *pvParameters)
     while (1) {
         // 读取当前按钮状态（GPIO35上拉，按下为低电平）
         current_button_state = gpio_get_level(gpio_num);
-        printf("%d\n", current_button_state);
+        //printf("%d\n", current_button_state);
         // 检测下降沿（从高电平变为低电平，即按钮按下）
         if (current_button_state == 0 && last_button_state == 1) {
             // 简单的软件消抖
             uint32_t current_time = xTaskGetTickCount();
             if ((current_time - last_interrupt_time) > pdMS_TO_TICKS(DEBOUNCE_DELAY_MS)) {
-                ESP_LOGI(TAG, "button 4");
+                ESP_LOGI(TAG, "button 3");
                 // 有效按下，切换LED状态
                 led_state = !led_state;
                 gpio_set_level(GPIO_NUM_4, led_state);
-                printf("Button pressed! LED state changed to: %d\n", led_state);
+                //printf("Button pressed! 3");
                 
                 last_interrupt_time = current_time;
             }
@@ -89,7 +79,157 @@ void led_task(void *pvParameters)
         last_button_state = current_button_state;
         
         // 每10ms扫描一次
-        vTaskDelay(pdMS_TO_TICKS(10));
+        vTaskDelay(pdMS_TO_TICKS(50));
     }
 }
 
+static bool last_button_state2 = true; 
+void screen_button_task(void *pvParameters)
+{
+    led_config *led1_config = (led_config *)pvParameters;
+    gpio_num_t gpio_num = led1_config->gpio_num;
+    int time = led1_config->time;
+    int ledctrl = led1_config->ledctrl;
+    bool current_button_state;
+    uint32_t last_interrupt_time = 0;
+    xTaskCreate(video_player_task, "video_player", 8192, NULL, 5, &Task2);
+    while (1) {
+        current_button_state = gpio_get_level(gpio_num);
+        //printf("%d\n", current_button_state);
+        // 检测下降沿（从高电平变为低电平，即按钮按下）
+        if (current_button_state == 0 && last_button_state2 == 1) {
+            // 简单的软件消抖
+            uint32_t current_time = xTaskGetTickCount();
+            if ((current_time - last_interrupt_time) > pdMS_TO_TICKS(DEBOUNCE_DELAY_MS)) {
+                ESP_LOGI(TAG, "button 4");
+                // 有效按下，切换LED状态
+                oled_state = !oled_state;
+                if(oled_state){
+                    vTaskDelete(Task2);
+                    xTaskCreate(tcp_client_task, "tcp_client", 8192, NULL, 5, &Task1);
+
+                }else{
+                    vTaskDelete(Task1);
+                    xTaskCreate(video_player_task, "video_player", 8192, NULL, 5, &Task2);//视频播放任务
+                }
+                printf("Button pressed! 2");
+                
+                last_interrupt_time = current_time;
+            }
+        }
+        
+        last_button_state2 = current_button_state;
+        
+        // 每30ms扫描一次
+        vTaskDelay(pdMS_TO_TICKS(50));
+    }
+}
+
+static bool last_button_state3 = true; 
+static int circle = 0; 
+    
+void button_task1(void *pvParameters)
+{
+    led_config stepper_config1 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
+        .gpio_num = GPIO_NUM_21,
+        .time = 32332526,
+        .ledctrl = 341,
+    };
+    led_config stepper_config2 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
+        .gpio_num = GPIO_NUM_21,
+        .time = 27141213,
+        .ledctrl = 341,
+    };
+    led_config stepper_config3 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
+        .gpio_num = GPIO_NUM_21,
+        .time = 21191805,
+        .ledctrl = 341,
+    };
+    led_config stepper_config11 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
+        .gpio_num = GPIO_NUM_21,
+        .time = 32332526,
+        .ledctrl = 342,
+    };
+    led_config stepper_config22 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
+        .gpio_num = GPIO_NUM_21,
+        .time = 27141213,
+        .ledctrl = 342,
+    };
+    led_config stepper_config33 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
+        .gpio_num = GPIO_NUM_21,
+        .time = 21191805,
+        .ledctrl = 342,
+    };
+    led_config *led1_config = (led_config *)pvParameters;
+    gpio_num_t gpio_num = led1_config->gpio_num;
+    int time = led1_config->time;
+    int ledctrl = led1_config->ledctrl;
+    bool current_button_state;
+    uint32_t last_interrupt_time = 0;
+    while (1) {
+        current_button_state = gpio_get_level(gpio_num);
+        //printf("%d\n", current_button_state);
+        // 检测下降沿（从高电平变为低电平，即按钮按下）
+        if (current_button_state == 0 && last_button_state3 == 1) {
+            // 简单的软件消抖
+            uint32_t current_time = xTaskGetTickCount();
+            if ((current_time - last_interrupt_time) > pdMS_TO_TICKS(DEBOUNCE_DELAY_MS)) {
+                ESP_LOGI(TAG, "button 2");
+                // 有效按下，切换LED状态
+                circle++;
+                if(circle%3==0){
+                    xTaskCreate(step_forward, "step_forward", 4096, (void *)&stepper_config11, 5, NULL);
+                vTaskDelay(pdMS_TO_TICKS(1000));
+                xTaskCreate(step_forward, "step_forward", 4096, (void *)&stepper_config22, 5, NULL);
+                vTaskDelay(pdMS_TO_TICKS(1000));
+                xTaskCreate(step_forward, "step_forward", 4096, (void *)&stepper_config33, 5, NULL);
+                vTaskDelay(pdMS_TO_TICKS(1000));
+                }else{
+                    xTaskCreate(step_forward, "step_forward", 4096, (void *)&stepper_config1, 5, NULL);
+                vTaskDelay(pdMS_TO_TICKS(1000));
+                xTaskCreate(step_forward, "step_forward", 4096, (void *)&stepper_config2, 5, NULL);
+                vTaskDelay(pdMS_TO_TICKS(1000));
+                xTaskCreate(step_forward, "step_forward", 4096, (void *)&stepper_config3, 5, NULL);
+                vTaskDelay(pdMS_TO_TICKS(1000));
+                }
+                
+            }
+        }
+        
+        last_button_state3 = current_button_state;
+        
+        // 每10ms扫描一次
+        vTaskDelay(pdMS_TO_TICKS(50));
+    }
+}
+static bool last_button_state4 = true; 
+    
+void button_task2(void *pvParameters)
+{
+    
+    led_config *led1_config = (led_config *)pvParameters;
+    gpio_num_t gpio_num = led1_config->gpio_num;
+    int time = led1_config->time;
+    int ledctrl = led1_config->ledctrl;
+    bool current_button_state;
+    uint32_t last_interrupt_time = 0;
+    while (1) {
+        current_button_state = gpio_get_level(gpio_num);
+        //printf("%d\n", current_button_state);
+        // 检测下降沿（从高电平变为低电平，即按钮按下）
+        if (current_button_state == 0 && last_button_state4 == 1) {
+            // 简单的软件消抖
+            uint32_t current_time = xTaskGetTickCount();
+            if ((current_time - last_interrupt_time) > pdMS_TO_TICKS(DEBOUNCE_DELAY_MS)) {
+                ESP_LOGI(TAG, "button 1");
+                
+                
+            }
+        }
+        
+        last_button_state4 = current_button_state;
+        
+        // 每10ms扫描一次
+        vTaskDelay(pdMS_TO_TICKS(50));
+    }
+}

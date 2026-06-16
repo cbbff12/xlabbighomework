@@ -1,0 +1,2 @@
+Command: ninja all
+ninja: error: 'C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/showscreen.cc', needed by 'esp-idf/main/CMakeFiles/__idf_main.dir/showscreen.cc.obj', missing and no known rule to make it

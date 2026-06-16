@@ -5,7 +5,6 @@
 #include "driver/gpio.h"
 #include "esp_rom_sys.h"  // 用于微秒级延时
 #include "init.h"
-#include "gpio.h"
 #include "esp_task_wdt.h"
 #include "soc/gpio_num.h"
 /*
@@ -14,6 +13,23 @@
 #define IN3_PIN GPIO_NUM_18
 #define IN4_PIN GPIO_NUM_5*/
 #define STEP_DELAY_US 2000
+void led_init(gpio_num_t num)//设置为输出模式，函数名懒得改了
+{
+    // 配置GPIO为输出模式
+    gpio_config_t io_conf = {
+        .pin_bit_mask = (1ULL << num),  // 选择要配置的GPIO引脚
+        .mode = GPIO_MODE_OUTPUT,            // 设置为输出模式
+        .pull_up_en = GPIO_PULLUP_DISABLE,   // 启用内部上拉电阻
+        .pull_down_en = GPIO_PULLDOWN_DISABLE, // 禁用下拉电阻
+        .intr_type = GPIO_INTR_DISABLE       // 禁用中断
+    };
+    
+    // 应用GPIO配置
+    gpio_config(&io_conf);
+    
+    // 初始状态设置为低电平（LED关闭）
+    gpio_set_level(num, 0);
+}
 void stepper_init(void){
     led_init(GPIO_NUM_5);
     led_init(GPIO_NUM_18);

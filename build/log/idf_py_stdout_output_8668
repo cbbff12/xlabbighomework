@@ -1,0 +1,474 @@
+Command: ninja all
+[1/13] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Administrator\Desktop\esp32\xlabbighomework\build && C:\Users\Administrator\.espressif\python_env\idf5.5_py3.14_env\Scripts\python.exe C:/esp/v5.5.4/esp-idf/components/spiffs/spiffsgen.py 0x19000 C:/Users/Administrator/Desktop/esp32/xlabbighomework/spiffs_data C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/spiffs.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
+[2/13] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\bootloader\esp-idf\esptool_py && C:\Users\Administrator\.espressif\python_env\idf5.5_py3.14_env\Scripts\python.exe C:/esp/v5.5.4/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6630 bytes. 0x9d0 bytes (9%) free.
+[3/13] No install step for 'bootloader'
+[4/13] Completed 'bootloader'
+[5/13] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/esp32_screen.cc.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/esp32_screen.cc.obj 
+ccache C:\Users\Administrator\.espressif\tools\xtensa-esp-elf\esp-14.2.0_20260121\xtensa-esp-elf\bin\xtensa-esp32-elf-g++.exe -DESP_PLATFORM -DIDF_VER=\"v5.5.4\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -IC:/Users/Administrator/Desktop/esp32/xlabbighomework/build/config -IC:/Users/Administrator/Desktop/esp32/xlabbighomework/main -IC:/esp/v5.5.4/esp-idf/components/newlib/platform_include -IC:/esp/v5.5.4/esp-idf/components/freertos/config/include -IC:/esp/v5.5.4/esp-idf/components/freertos/config/include/freertos -IC:/esp/v5.5.4/esp-idf/components/freertos/config/xtensa/include -IC:/esp/v5.5.4/esp-idf/components/freertos/FreeRTOS-Kernel/include -IC:/esp/v5.5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -IC:/esp/v5.5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -IC:/esp/v5.5.4/esp-idf/components/freertos/esp_additions/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/include/soc -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/include/soc/esp32 -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/dma/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/ldo/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/debug_probe/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/power_supply/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/port/esp32/. -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/port/esp32/include -IC:/esp/v5.5.4/esp-idf/components/heap/include -IC:/esp/v5.5.4/esp-idf/components/heap/tlsf -IC:/esp/v5.5.4/esp-idf/components/log/include -IC:/esp/v5.5.4/esp-idf/components/soc/include -IC:/esp/v5.5.4/esp-idf/components/soc/esp32 -IC:/esp/v5.5.4/esp-idf/components/soc/esp32/include -IC:/esp/v5.5.4/esp-idf/components/soc/esp32/register -IC:/esp/v5.5.4/esp-idf/components/hal/platform_port/include -IC:/esp/v5.5.4/esp-idf/components/hal/esp32/include -IC:/esp/v5.5.4/esp-idf/components/hal/include -IC:/esp/v5.5.4/esp-idf/components/esp_rom/include -IC:/esp/v5.5.4/esp-idf/components/esp_rom/esp32/include -IC:/esp/v5.5.4/esp-idf/components/esp_rom/esp32/include/esp32 -IC:/esp/v5.5.4/esp-idf/components/esp_rom/esp32 -IC:/esp/v5.5.4/esp-idf/components/esp_common/include -IC:/esp/v5.5.4/esp-idf/components/esp_system/include -IC:/esp/v5.5.4/esp-idf/components/esp_system/port/soc -IC:/esp/v5.5.4/esp-idf/components/esp_system/port/include/private -IC:/esp/v5.5.4/esp-idf/components/xtensa/esp32/include -IC:/esp/v5.5.4/esp-idf/components/xtensa/include -IC:/esp/v5.5.4/esp-idf/components/xtensa/deprecated_include -IC:/esp/v5.5.4/esp-idf/components/lwip/include -IC:/esp/v5.5.4/esp-idf/components/lwip/include/apps -IC:/esp/v5.5.4/esp-idf/components/lwip/include/apps/sntp -IC:/esp/v5.5.4/esp-idf/components/lwip/lwip/src/include -IC:/esp/v5.5.4/esp-idf/components/lwip/port/include -IC:/esp/v5.5.4/esp-idf/components/lwip/port/freertos/include -IC:/esp/v5.5.4/esp-idf/components/lwip/port/esp32xx/include -IC:/esp/v5.5.4/esp-idf/components/lwip/port/esp32xx/include/arch -IC:/esp/v5.5.4/esp-idf/components/lwip/port/esp32xx/include/sys -IC:/esp/v5.5.4/esp-idf/components/esp_driver_gpio/include -IC:/esp/v5.5.4/esp-idf/components/esp_pm/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/port/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/library -IC:/esp/v5.5.4/esp-idf/components/mbedtls/esp_crt_bundle/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -IC:/esp/v5.5.4/esp-idf/components/esp_app_format/include -IC:/esp/v5.5.4/esp-idf/components/esp_bootloader_format/include -IC:/esp/v5.5.4/esp-idf/components/app_update/include -IC:/esp/v5.5.4/esp-idf/components/bootloader_support/include -IC:/esp/v5.5.4/esp-idf/components/bootloader_support/bootloader_flash/include -IC:/esp/v5.5.4/esp-idf/components/esp_partition/include -IC:/esp/v5.5.4/esp-idf/components/efuse/include -IC:/esp/v5.5.4/esp-idf/components/efuse/esp32/include -IC:/esp/v5.5.4/esp-idf/components/esp_mm/include -IC:/esp/v5.5.4/esp-idf/components/spi_flash/include -IC:/esp/v5.5.4/esp-idf/components/esp_security/include -IC:/esp/v5.5.4/esp-idf/components/pthread/include -IC:/esp/v5.5.4/esp-idf/components/esp_timer/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_gptimer/include -IC:/esp/v5.5.4/esp-idf/components/esp_ringbuf/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_spi/include -IC:/esp/v5.5.4/esp-idf/components/esp_psram/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_uart/include -IC:/esp/v5.5.4/esp-idf/components/vfs/include -IC:/esp/v5.5.4/esp-idf/components/app_trace/include -IC:/esp/v5.5.4/esp-idf/components/esp_event/include -IC:/esp/v5.5.4/esp-idf/components/nvs_flash/include -IC:/esp/v5.5.4/esp-idf/components/esp_phy/include -IC:/esp/v5.5.4/esp-idf/components/esp_phy/esp32/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_usb_serial_jtag/include -IC:/esp/v5.5.4/esp-idf/components/esp_vfs_console/include -IC:/esp/v5.5.4/esp-idf/components/esp_netif/include -IC:/esp/v5.5.4/esp-idf/components/wpa_supplicant/include -IC:/esp/v5.5.4/esp-idf/components/wpa_supplicant/port/include -IC:/esp/v5.5.4/esp-idf/components/wpa_supplicant/esp_supplicant/include -IC:/esp/v5.5.4/esp-idf/components/esp_coex/include -IC:/esp/v5.5.4/esp-idf/components/esp_wifi/include -IC:/esp/v5.5.4/esp-idf/components/esp_wifi/include/local -IC:/esp/v5.5.4/esp-idf/components/esp_wifi/wifi_apps/include -IC:/esp/v5.5.4/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -IC:/esp/v5.5.4/esp-idf/components/esp_gdbstub/include -IC:/esp/v5.5.4/esp-idf/components/unity/include -IC:/esp/v5.5.4/esp-idf/components/unity/unity/src -IC:/esp/v5.5.4/esp-idf/components/cmock/CMock/src -IC:/esp/v5.5.4/esp-idf/components/console -IC:/esp/v5.5.4/esp-idf/components/esp_driver_pcnt/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_mcpwm/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_ana_cmpr/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_i2s/include -IC:/esp/v5.5.4/esp-idf/components/sdmmc/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_sdmmc/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_sdspi/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_sdio/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_dac/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_bitscrambler/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_rmt/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_tsens/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_sdm/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_i2c/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_ledc/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_parlio/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_twai/include -IC:/esp/v5.5.4/esp-idf/components/driver/deprecated -IC:/esp/v5.5.4/esp-idf/components/driver/i2c/include -IC:/esp/v5.5.4/esp-idf/components/driver/touch_sensor/include -IC:/esp/v5.5.4/esp-idf/components/driver/twai/include -IC:/esp/v5.5.4/esp-idf/components/driver/touch_sensor/esp32/include -IC:/esp/v5.5.4/esp-idf/components/http_parser -IC:/esp/v5.5.4/esp-idf/components/esp-tls -IC:/esp/v5.5.4/esp-idf/components/esp-tls/esp-tls-crypto -IC:/esp/v5.5.4/esp-idf/components/esp_adc/include -IC:/esp/v5.5.4/esp-idf/components/esp_adc/interface -IC:/esp/v5.5.4/esp-idf/components/esp_adc/esp32/include -IC:/esp/v5.5.4/esp-idf/components/esp_adc/deprecated/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_isp/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_cam/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_cam/interface -IC:/esp/v5.5.4/esp-idf/components/esp_driver_jpeg/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_ppa/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_touch_sens/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_touch_sens/hw_ver1/include -IC:/esp/v5.5.4/esp-idf/components/esp_eth/include -IC:/esp/v5.5.4/esp-idf/components/esp_hal_ieee802154/include -IC:/esp/v5.5.4/esp-idf/components/esp_hid/include -IC:/esp/v5.5.4/esp-idf/components/tcp_transport/include -IC:/esp/v5.5.4/esp-idf/components/esp_http_client/include -IC:/esp/v5.5.4/esp-idf/components/esp_http_server/include -IC:/esp/v5.5.4/esp-idf/components/esp_https_ota/include -IC:/esp/v5.5.4/esp-idf/components/esp_https_server/include -IC:/esp/v5.5.4/esp-idf/components/esp_lcd/include -IC:/esp/v5.5.4/esp-idf/components/esp_lcd/interface -IC:/esp/v5.5.4/esp-idf/components/protobuf-c/protobuf-c -IC:/esp/v5.5.4/esp-idf/components/protocomm/include/common -IC:/esp/v5.5.4/esp-idf/components/protocomm/include/security -IC:/esp/v5.5.4/esp-idf/components/protocomm/include/transports -IC:/esp/v5.5.4/esp-idf/components/protocomm/include/crypto/srp6a -IC:/esp/v5.5.4/esp-idf/components/protocomm/proto-c -IC:/esp/v5.5.4/esp-idf/components/esp_local_ctrl/include -IC:/esp/v5.5.4/esp-idf/components/espcoredump/include -IC:/esp/v5.5.4/esp-idf/components/espcoredump/include/port/xtensa -IC:/esp/v5.5.4/esp-idf/components/wear_levelling/include -IC:/esp/v5.5.4/esp-idf/components/fatfs/diskio -IC:/esp/v5.5.4/esp-idf/components/fatfs/src -IC:/esp/v5.5.4/esp-idf/components/fatfs/vfs -IC:/esp/v5.5.4/esp-idf/components/idf_test/include -IC:/esp/v5.5.4/esp-idf/components/idf_test/include/esp32 -IC:/esp/v5.5.4/esp-idf/components/ieee802154/include -IC:/esp/v5.5.4/esp-idf/components/json/cJSON -IC:/esp/v5.5.4/esp-idf/components/mqtt/esp-mqtt/include -IC:/esp/v5.5.4/esp-idf/components/nvs_sec_provider/include -IC:/esp/v5.5.4/esp-idf/components/perfmon/include -IC:/esp/v5.5.4/esp-idf/components/rt/include -IC:/esp/v5.5.4/esp-idf/components/spiffs/include -IC:/esp/v5.5.4/esp-idf/components/wifi_provisioning/include @"C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/toolchain/cxxflags" -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=C:/Users/Administrator/Desktop/esp32/xlabbighomework=. -fmacro-prefix-map=C:/esp/v5.5.4/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu++2b -fno-exceptions -fuse-cxa-atexit -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/esp32_screen.cc.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\esp32_screen.cc.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/esp32_screen.cc.obj -c C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.cc
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.cc:3:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void oled_init2()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:128:9: error: either all initializer clauses should be designated or none of them should be
+  128 |         .master.clk_speed = OLED_I2C_FREQ_HZ,
+      |         ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:128:9: error: expected primary-expression before '.' token
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void switch_to_next_wifi()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:206:13: error: expected primary-expression before '.' token
+  206 |             .threshold.authmode = WIFI_AUTH_WPA2_PSK,
+      |             ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void wifi_init_sta()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:280:13: error: expected primary-expression before '.' token
+  280 |             .threshold.authmode = WIFI_AUTH_WPA2_PSK,
+      |             ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.cc: At global scope:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.cc:10:5: error: expected initializer before 'void'
+   10 |     void wifi_init_sta(void);
+      |     ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:67:13: warning: 'wifi_connecting' defined but not used [-Wunused-variable]
+   67 | static bool wifi_connecting = false;
+      |             ^~~~~~~~~~~~~~~
+[6/13] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/gpio.cc.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/gpio.cc.obj 
+ccache C:\Users\Administrator\.espressif\tools\xtensa-esp-elf\esp-14.2.0_20260121\xtensa-esp-elf\bin\xtensa-esp32-elf-g++.exe -DESP_PLATFORM -DIDF_VER=\"v5.5.4\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -IC:/Users/Administrator/Desktop/esp32/xlabbighomework/build/config -IC:/Users/Administrator/Desktop/esp32/xlabbighomework/main -IC:/esp/v5.5.4/esp-idf/components/newlib/platform_include -IC:/esp/v5.5.4/esp-idf/components/freertos/config/include -IC:/esp/v5.5.4/esp-idf/components/freertos/config/include/freertos -IC:/esp/v5.5.4/esp-idf/components/freertos/config/xtensa/include -IC:/esp/v5.5.4/esp-idf/components/freertos/FreeRTOS-Kernel/include -IC:/esp/v5.5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -IC:/esp/v5.5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -IC:/esp/v5.5.4/esp-idf/components/freertos/esp_additions/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/include/soc -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/include/soc/esp32 -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/dma/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/ldo/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/debug_probe/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/power_supply/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/port/esp32/. -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/port/esp32/include -IC:/esp/v5.5.4/esp-idf/components/heap/include -IC:/esp/v5.5.4/esp-idf/components/heap/tlsf -IC:/esp/v5.5.4/esp-idf/components/log/include -IC:/esp/v5.5.4/esp-idf/components/soc/include -IC:/esp/v5.5.4/esp-idf/components/soc/esp32 -IC:/esp/v5.5.4/esp-idf/components/soc/esp32/include -IC:/esp/v5.5.4/esp-idf/components/soc/esp32/register -IC:/esp/v5.5.4/esp-idf/components/hal/platform_port/include -IC:/esp/v5.5.4/esp-idf/components/hal/esp32/include -IC:/esp/v5.5.4/esp-idf/components/hal/include -IC:/esp/v5.5.4/esp-idf/components/esp_rom/include -IC:/esp/v5.5.4/esp-idf/components/esp_rom/esp32/include -IC:/esp/v5.5.4/esp-idf/components/esp_rom/esp32/include/esp32 -IC:/esp/v5.5.4/esp-idf/components/esp_rom/esp32 -IC:/esp/v5.5.4/esp-idf/components/esp_common/include -IC:/esp/v5.5.4/esp-idf/components/esp_system/include -IC:/esp/v5.5.4/esp-idf/components/esp_system/port/soc -IC:/esp/v5.5.4/esp-idf/components/esp_system/port/include/private -IC:/esp/v5.5.4/esp-idf/components/xtensa/esp32/include -IC:/esp/v5.5.4/esp-idf/components/xtensa/include -IC:/esp/v5.5.4/esp-idf/components/xtensa/deprecated_include -IC:/esp/v5.5.4/esp-idf/components/lwip/include -IC:/esp/v5.5.4/esp-idf/components/lwip/include/apps -IC:/esp/v5.5.4/esp-idf/components/lwip/include/apps/sntp -IC:/esp/v5.5.4/esp-idf/components/lwip/lwip/src/include -IC:/esp/v5.5.4/esp-idf/components/lwip/port/include -IC:/esp/v5.5.4/esp-idf/components/lwip/port/freertos/include -IC:/esp/v5.5.4/esp-idf/components/lwip/port/esp32xx/include -IC:/esp/v5.5.4/esp-idf/components/lwip/port/esp32xx/include/arch -IC:/esp/v5.5.4/esp-idf/components/lwip/port/esp32xx/include/sys -IC:/esp/v5.5.4/esp-idf/components/esp_driver_gpio/include -IC:/esp/v5.5.4/esp-idf/components/esp_pm/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/port/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/library -IC:/esp/v5.5.4/esp-idf/components/mbedtls/esp_crt_bundle/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -IC:/esp/v5.5.4/esp-idf/components/esp_app_format/include -IC:/esp/v5.5.4/esp-idf/components/esp_bootloader_format/include -IC:/esp/v5.5.4/esp-idf/components/app_update/include -IC:/esp/v5.5.4/esp-idf/components/bootloader_support/include -IC:/esp/v5.5.4/esp-idf/components/bootloader_support/bootloader_flash/include -IC:/esp/v5.5.4/esp-idf/components/esp_partition/include -IC:/esp/v5.5.4/esp-idf/components/efuse/include -IC:/esp/v5.5.4/esp-idf/components/efuse/esp32/include -IC:/esp/v5.5.4/esp-idf/components/esp_mm/include -IC:/esp/v5.5.4/esp-idf/components/spi_flash/include -IC:/esp/v5.5.4/esp-idf/components/esp_security/include -IC:/esp/v5.5.4/esp-idf/components/pthread/include -IC:/esp/v5.5.4/esp-idf/components/esp_timer/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_gptimer/include -IC:/esp/v5.5.4/esp-idf/components/esp_ringbuf/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_spi/include -IC:/esp/v5.5.4/esp-idf/components/esp_psram/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_uart/include -IC:/esp/v5.5.4/esp-idf/components/vfs/include -IC:/esp/v5.5.4/esp-idf/components/app_trace/include -IC:/esp/v5.5.4/esp-idf/components/esp_event/include -IC:/esp/v5.5.4/esp-idf/components/nvs_flash/include -IC:/esp/v5.5.4/esp-idf/components/esp_phy/include -IC:/esp/v5.5.4/esp-idf/components/esp_phy/esp32/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_usb_serial_jtag/include -IC:/esp/v5.5.4/esp-idf/components/esp_vfs_console/include -IC:/esp/v5.5.4/esp-idf/components/esp_netif/include -IC:/esp/v5.5.4/esp-idf/components/wpa_supplicant/include -IC:/esp/v5.5.4/esp-idf/components/wpa_supplicant/port/include -IC:/esp/v5.5.4/esp-idf/components/wpa_supplicant/esp_supplicant/include -IC:/esp/v5.5.4/esp-idf/components/esp_coex/include -IC:/esp/v5.5.4/esp-idf/components/esp_wifi/include -IC:/esp/v5.5.4/esp-idf/components/esp_wifi/include/local -IC:/esp/v5.5.4/esp-idf/components/esp_wifi/wifi_apps/include -IC:/esp/v5.5.4/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -IC:/esp/v5.5.4/esp-idf/components/esp_gdbstub/include -IC:/esp/v5.5.4/esp-idf/components/unity/include -IC:/esp/v5.5.4/esp-idf/components/unity/unity/src -IC:/esp/v5.5.4/esp-idf/components/cmock/CMock/src -IC:/esp/v5.5.4/esp-idf/components/console -IC:/esp/v5.5.4/esp-idf/components/esp_driver_pcnt/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_mcpwm/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_ana_cmpr/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_i2s/include -IC:/esp/v5.5.4/esp-idf/components/sdmmc/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_sdmmc/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_sdspi/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_sdio/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_dac/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_bitscrambler/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_rmt/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_tsens/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_sdm/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_i2c/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_ledc/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_parlio/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_twai/include -IC:/esp/v5.5.4/esp-idf/components/driver/deprecated -IC:/esp/v5.5.4/esp-idf/components/driver/i2c/include -IC:/esp/v5.5.4/esp-idf/components/driver/touch_sensor/include -IC:/esp/v5.5.4/esp-idf/components/driver/twai/include -IC:/esp/v5.5.4/esp-idf/components/driver/touch_sensor/esp32/include -IC:/esp/v5.5.4/esp-idf/components/http_parser -IC:/esp/v5.5.4/esp-idf/components/esp-tls -IC:/esp/v5.5.4/esp-idf/components/esp-tls/esp-tls-crypto -IC:/esp/v5.5.4/esp-idf/components/esp_adc/include -IC:/esp/v5.5.4/esp-idf/components/esp_adc/interface -IC:/esp/v5.5.4/esp-idf/components/esp_adc/esp32/include -IC:/esp/v5.5.4/esp-idf/components/esp_adc/deprecated/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_isp/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_cam/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_cam/interface -IC:/esp/v5.5.4/esp-idf/components/esp_driver_jpeg/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_ppa/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_touch_sens/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_touch_sens/hw_ver1/include -IC:/esp/v5.5.4/esp-idf/components/esp_eth/include -IC:/esp/v5.5.4/esp-idf/components/esp_hal_ieee802154/include -IC:/esp/v5.5.4/esp-idf/components/esp_hid/include -IC:/esp/v5.5.4/esp-idf/components/tcp_transport/include -IC:/esp/v5.5.4/esp-idf/components/esp_http_client/include -IC:/esp/v5.5.4/esp-idf/components/esp_http_server/include -IC:/esp/v5.5.4/esp-idf/components/esp_https_ota/include -IC:/esp/v5.5.4/esp-idf/components/esp_https_server/include -IC:/esp/v5.5.4/esp-idf/components/esp_lcd/include -IC:/esp/v5.5.4/esp-idf/components/esp_lcd/interface -IC:/esp/v5.5.4/esp-idf/components/protobuf-c/protobuf-c -IC:/esp/v5.5.4/esp-idf/components/protocomm/include/common -IC:/esp/v5.5.4/esp-idf/components/protocomm/include/security -IC:/esp/v5.5.4/esp-idf/components/protocomm/include/transports -IC:/esp/v5.5.4/esp-idf/components/protocomm/include/crypto/srp6a -IC:/esp/v5.5.4/esp-idf/components/protocomm/proto-c -IC:/esp/v5.5.4/esp-idf/components/esp_local_ctrl/include -IC:/esp/v5.5.4/esp-idf/components/espcoredump/include -IC:/esp/v5.5.4/esp-idf/components/espcoredump/include/port/xtensa -IC:/esp/v5.5.4/esp-idf/components/wear_levelling/include -IC:/esp/v5.5.4/esp-idf/components/fatfs/diskio -IC:/esp/v5.5.4/esp-idf/components/fatfs/src -IC:/esp/v5.5.4/esp-idf/components/fatfs/vfs -IC:/esp/v5.5.4/esp-idf/components/idf_test/include -IC:/esp/v5.5.4/esp-idf/components/idf_test/include/esp32 -IC:/esp/v5.5.4/esp-idf/components/ieee802154/include -IC:/esp/v5.5.4/esp-idf/components/json/cJSON -IC:/esp/v5.5.4/esp-idf/components/mqtt/esp-mqtt/include -IC:/esp/v5.5.4/esp-idf/components/nvs_sec_provider/include -IC:/esp/v5.5.4/esp-idf/components/perfmon/include -IC:/esp/v5.5.4/esp-idf/components/rt/include -IC:/esp/v5.5.4/esp-idf/components/spiffs/include -IC:/esp/v5.5.4/esp-idf/components/wifi_provisioning/include @"C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/toolchain/cxxflags" -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=C:/Users/Administrator/Desktop/esp32/xlabbighomework=. -fmacro-prefix-map=C:/esp/v5.5.4/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu++2b -fno-exceptions -fuse-cxa-atexit -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/gpio.cc.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\gpio.cc.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/gpio.cc.obj -c C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.cc
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:16,
+                 from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.cc:1:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:61:20: error: redefinition of 'const char* TAG'
+   61 | static const char *TAG = "ESP32_SCREEN";
+      |                    ^~~
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:15:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/init.h:3:20: note: 'const char* TAG' previously defined here
+    3 | static const char *TAG = "zjhnb";
+      |                    ^~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void oled_init2()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:128:9: error: either all initializer clauses should be designated or none of them should be
+  128 |         .master.clk_speed = OLED_I2C_FREQ_HZ,
+      |         ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:128:9: error: expected primary-expression before '.' token
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void switch_to_next_wifi()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:206:13: error: expected primary-expression before '.' token
+  206 |             .threshold.authmode = WIFI_AUTH_WPA2_PSK,
+      |             ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void wifi_init_sta()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:280:13: error: expected primary-expression before '.' token
+  280 |             .threshold.authmode = WIFI_AUTH_WPA2_PSK,
+      |             ^
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:17:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h: At global scope:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4402:6: error: ambiguating new declaration of 'void oled_write_cmd(uint8_t)'
+ 4402 | void oled_write_cmd(uint8_t cmd) {
+      |      ^~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:95:18: note: old declaration 'esp_err_t oled_write_cmd(uint8_t)'
+   95 | static esp_err_t oled_write_cmd(uint8_t cmd) {
+      |                  ^~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4414:6: error: ambiguating new declaration of 'void oled_write_data(uint8_t*, size_t)'
+ 4414 | void oled_write_data(uint8_t* data, size_t len) {
+      |      ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:107:18: note: old declaration 'esp_err_t oled_write_data(uint8_t*, size_t)'
+  107 | static esp_err_t oled_write_data(uint8_t *data, size_t len) {
+      |                  ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void button_isr_handler(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:65:9: warning: unused variable 'time' [-Wunused-variable]
+   65 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:66:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   66 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void led_task(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:73:9: warning: unused variable 'time' [-Wunused-variable]
+   73 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:74:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+   74 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void screen_button_task(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:109:9: warning: unused variable 'time' [-Wunused-variable]
+  109 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:110:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+  110 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.cc: At global scope:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.cc:4:44: warning: ignoring attribute 'section (".iram1.1")' because it conflicts with previous 'section (".iram1.0")' [-Wattributes]
+    4 | void IRAM_ATTR button_isr_handler(void* arg);
+      |                                            ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:62:16: note: previous declaration here
+   62 | void IRAM_ATTR button_isr_handler(void *pvParameters)
+      |                ^~~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:67:13: warning: 'wifi_connecting' defined but not used [-Wunused-variable]
+   67 | static bool wifi_connecting = false;
+      |             ^~~~~~~~~~~~~~~
+[7/13] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/stepper.cc.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/stepper.cc.obj 
+ccache C:\Users\Administrator\.espressif\tools\xtensa-esp-elf\esp-14.2.0_20260121\xtensa-esp-elf\bin\xtensa-esp32-elf-g++.exe -DESP_PLATFORM -DIDF_VER=\"v5.5.4\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -IC:/Users/Administrator/Desktop/esp32/xlabbighomework/build/config -IC:/Users/Administrator/Desktop/esp32/xlabbighomework/main -IC:/esp/v5.5.4/esp-idf/components/newlib/platform_include -IC:/esp/v5.5.4/esp-idf/components/freertos/config/include -IC:/esp/v5.5.4/esp-idf/components/freertos/config/include/freertos -IC:/esp/v5.5.4/esp-idf/components/freertos/config/xtensa/include -IC:/esp/v5.5.4/esp-idf/components/freertos/FreeRTOS-Kernel/include -IC:/esp/v5.5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -IC:/esp/v5.5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -IC:/esp/v5.5.4/esp-idf/components/freertos/esp_additions/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/include/soc -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/include/soc/esp32 -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/dma/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/ldo/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/debug_probe/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/power_supply/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/port/esp32/. -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/port/esp32/include -IC:/esp/v5.5.4/esp-idf/components/heap/include -IC:/esp/v5.5.4/esp-idf/components/heap/tlsf -IC:/esp/v5.5.4/esp-idf/components/log/include -IC:/esp/v5.5.4/esp-idf/components/soc/include -IC:/esp/v5.5.4/esp-idf/components/soc/esp32 -IC:/esp/v5.5.4/esp-idf/components/soc/esp32/include -IC:/esp/v5.5.4/esp-idf/components/soc/esp32/register -IC:/esp/v5.5.4/esp-idf/components/hal/platform_port/include -IC:/esp/v5.5.4/esp-idf/components/hal/esp32/include -IC:/esp/v5.5.4/esp-idf/components/hal/include -IC:/esp/v5.5.4/esp-idf/components/esp_rom/include -IC:/esp/v5.5.4/esp-idf/components/esp_rom/esp32/include -IC:/esp/v5.5.4/esp-idf/components/esp_rom/esp32/include/esp32 -IC:/esp/v5.5.4/esp-idf/components/esp_rom/esp32 -IC:/esp/v5.5.4/esp-idf/components/esp_common/include -IC:/esp/v5.5.4/esp-idf/components/esp_system/include -IC:/esp/v5.5.4/esp-idf/components/esp_system/port/soc -IC:/esp/v5.5.4/esp-idf/components/esp_system/port/include/private -IC:/esp/v5.5.4/esp-idf/components/xtensa/esp32/include -IC:/esp/v5.5.4/esp-idf/components/xtensa/include -IC:/esp/v5.5.4/esp-idf/components/xtensa/deprecated_include -IC:/esp/v5.5.4/esp-idf/components/lwip/include -IC:/esp/v5.5.4/esp-idf/components/lwip/include/apps -IC:/esp/v5.5.4/esp-idf/components/lwip/include/apps/sntp -IC:/esp/v5.5.4/esp-idf/components/lwip/lwip/src/include -IC:/esp/v5.5.4/esp-idf/components/lwip/port/include -IC:/esp/v5.5.4/esp-idf/components/lwip/port/freertos/include -IC:/esp/v5.5.4/esp-idf/components/lwip/port/esp32xx/include -IC:/esp/v5.5.4/esp-idf/components/lwip/port/esp32xx/include/arch -IC:/esp/v5.5.4/esp-idf/components/lwip/port/esp32xx/include/sys -IC:/esp/v5.5.4/esp-idf/components/esp_driver_gpio/include -IC:/esp/v5.5.4/esp-idf/components/esp_pm/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/port/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/library -IC:/esp/v5.5.4/esp-idf/components/mbedtls/esp_crt_bundle/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -IC:/esp/v5.5.4/esp-idf/components/esp_app_format/include -IC:/esp/v5.5.4/esp-idf/components/esp_bootloader_format/include -IC:/esp/v5.5.4/esp-idf/components/app_update/include -IC:/esp/v5.5.4/esp-idf/components/bootloader_support/include -IC:/esp/v5.5.4/esp-idf/components/bootloader_support/bootloader_flash/include -IC:/esp/v5.5.4/esp-idf/components/esp_partition/include -IC:/esp/v5.5.4/esp-idf/components/efuse/include -IC:/esp/v5.5.4/esp-idf/components/efuse/esp32/include -IC:/esp/v5.5.4/esp-idf/components/esp_mm/include -IC:/esp/v5.5.4/esp-idf/components/spi_flash/include -IC:/esp/v5.5.4/esp-idf/components/esp_security/include -IC:/esp/v5.5.4/esp-idf/components/pthread/include -IC:/esp/v5.5.4/esp-idf/components/esp_timer/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_gptimer/include -IC:/esp/v5.5.4/esp-idf/components/esp_ringbuf/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_spi/include -IC:/esp/v5.5.4/esp-idf/components/esp_psram/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_uart/include -IC:/esp/v5.5.4/esp-idf/components/vfs/include -IC:/esp/v5.5.4/esp-idf/components/app_trace/include -IC:/esp/v5.5.4/esp-idf/components/esp_event/include -IC:/esp/v5.5.4/esp-idf/components/nvs_flash/include -IC:/esp/v5.5.4/esp-idf/components/esp_phy/include -IC:/esp/v5.5.4/esp-idf/components/esp_phy/esp32/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_usb_serial_jtag/include -IC:/esp/v5.5.4/esp-idf/components/esp_vfs_console/include -IC:/esp/v5.5.4/esp-idf/components/esp_netif/include -IC:/esp/v5.5.4/esp-idf/components/wpa_supplicant/include -IC:/esp/v5.5.4/esp-idf/components/wpa_supplicant/port/include -IC:/esp/v5.5.4/esp-idf/components/wpa_supplicant/esp_supplicant/include -IC:/esp/v5.5.4/esp-idf/components/esp_coex/include -IC:/esp/v5.5.4/esp-idf/components/esp_wifi/include -IC:/esp/v5.5.4/esp-idf/components/esp_wifi/include/local -IC:/esp/v5.5.4/esp-idf/components/esp_wifi/wifi_apps/include -IC:/esp/v5.5.4/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -IC:/esp/v5.5.4/esp-idf/components/esp_gdbstub/include -IC:/esp/v5.5.4/esp-idf/components/unity/include -IC:/esp/v5.5.4/esp-idf/components/unity/unity/src -IC:/esp/v5.5.4/esp-idf/components/cmock/CMock/src -IC:/esp/v5.5.4/esp-idf/components/console -IC:/esp/v5.5.4/esp-idf/components/esp_driver_pcnt/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_mcpwm/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_ana_cmpr/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_i2s/include -IC:/esp/v5.5.4/esp-idf/components/sdmmc/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_sdmmc/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_sdspi/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_sdio/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_dac/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_bitscrambler/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_rmt/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_tsens/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_sdm/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_i2c/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_ledc/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_parlio/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_twai/include -IC:/esp/v5.5.4/esp-idf/components/driver/deprecated -IC:/esp/v5.5.4/esp-idf/components/driver/i2c/include -IC:/esp/v5.5.4/esp-idf/components/driver/touch_sensor/include -IC:/esp/v5.5.4/esp-idf/components/driver/twai/include -IC:/esp/v5.5.4/esp-idf/components/driver/touch_sensor/esp32/include -IC:/esp/v5.5.4/esp-idf/components/http_parser -IC:/esp/v5.5.4/esp-idf/components/esp-tls -IC:/esp/v5.5.4/esp-idf/components/esp-tls/esp-tls-crypto -IC:/esp/v5.5.4/esp-idf/components/esp_adc/include -IC:/esp/v5.5.4/esp-idf/components/esp_adc/interface -IC:/esp/v5.5.4/esp-idf/components/esp_adc/esp32/include -IC:/esp/v5.5.4/esp-idf/components/esp_adc/deprecated/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_isp/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_cam/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_cam/interface -IC:/esp/v5.5.4/esp-idf/components/esp_driver_jpeg/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_ppa/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_touch_sens/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_touch_sens/hw_ver1/include -IC:/esp/v5.5.4/esp-idf/components/esp_eth/include -IC:/esp/v5.5.4/esp-idf/components/esp_hal_ieee802154/include -IC:/esp/v5.5.4/esp-idf/components/esp_hid/include -IC:/esp/v5.5.4/esp-idf/components/tcp_transport/include -IC:/esp/v5.5.4/esp-idf/components/esp_http_client/include -IC:/esp/v5.5.4/esp-idf/components/esp_http_server/include -IC:/esp/v5.5.4/esp-idf/components/esp_https_ota/include -IC:/esp/v5.5.4/esp-idf/components/esp_https_server/include -IC:/esp/v5.5.4/esp-idf/components/esp_lcd/include -IC:/esp/v5.5.4/esp-idf/components/esp_lcd/interface -IC:/esp/v5.5.4/esp-idf/components/protobuf-c/protobuf-c -IC:/esp/v5.5.4/esp-idf/components/protocomm/include/common -IC:/esp/v5.5.4/esp-idf/components/protocomm/include/security -IC:/esp/v5.5.4/esp-idf/components/protocomm/include/transports -IC:/esp/v5.5.4/esp-idf/components/protocomm/include/crypto/srp6a -IC:/esp/v5.5.4/esp-idf/components/protocomm/proto-c -IC:/esp/v5.5.4/esp-idf/components/esp_local_ctrl/include -IC:/esp/v5.5.4/esp-idf/components/espcoredump/include -IC:/esp/v5.5.4/esp-idf/components/espcoredump/include/port/xtensa -IC:/esp/v5.5.4/esp-idf/components/wear_levelling/include -IC:/esp/v5.5.4/esp-idf/components/fatfs/diskio -IC:/esp/v5.5.4/esp-idf/components/fatfs/src -IC:/esp/v5.5.4/esp-idf/components/fatfs/vfs -IC:/esp/v5.5.4/esp-idf/components/idf_test/include -IC:/esp/v5.5.4/esp-idf/components/idf_test/include/esp32 -IC:/esp/v5.5.4/esp-idf/components/ieee802154/include -IC:/esp/v5.5.4/esp-idf/components/json/cJSON -IC:/esp/v5.5.4/esp-idf/components/mqtt/esp-mqtt/include -IC:/esp/v5.5.4/esp-idf/components/nvs_sec_provider/include -IC:/esp/v5.5.4/esp-idf/components/perfmon/include -IC:/esp/v5.5.4/esp-idf/components/rt/include -IC:/esp/v5.5.4/esp-idf/components/spiffs/include -IC:/esp/v5.5.4/esp-idf/components/wifi_provisioning/include @"C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/toolchain/cxxflags" -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=C:/Users/Administrator/Desktop/esp32/xlabbighomework=. -fmacro-prefix-map=C:/esp/v5.5.4/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu++2b -fno-exceptions -fuse-cxa-atexit -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/stepper.cc.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\stepper.cc.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/stepper.cc.obj -c C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.cc
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:16,
+                 from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h:8,
+                 from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.cc:1:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:61:20: error: redefinition of 'const char* TAG'
+   61 | static const char *TAG = "ESP32_SCREEN";
+      |                    ^~~
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h:7:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/init.h:3:20: note: 'const char* TAG' previously defined here
+    3 | static const char *TAG = "zjhnb";
+      |                    ^~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void oled_init2()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:128:9: error: either all initializer clauses should be designated or none of them should be
+  128 |         .master.clk_speed = OLED_I2C_FREQ_HZ,
+      |         ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:128:9: error: expected primary-expression before '.' token
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void switch_to_next_wifi()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:206:13: error: expected primary-expression before '.' token
+  206 |             .threshold.authmode = WIFI_AUTH_WPA2_PSK,
+      |             ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void wifi_init_sta()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:280:13: error: expected primary-expression before '.' token
+  280 |             .threshold.authmode = WIFI_AUTH_WPA2_PSK,
+      |             ^
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:17:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h: At global scope:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4402:6: error: ambiguating new declaration of 'void oled_write_cmd(uint8_t)'
+ 4402 | void oled_write_cmd(uint8_t cmd) {
+      |      ^~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:95:18: note: old declaration 'esp_err_t oled_write_cmd(uint8_t)'
+   95 | static esp_err_t oled_write_cmd(uint8_t cmd) {
+      |                  ^~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4414:6: error: ambiguating new declaration of 'void oled_write_data(uint8_t*, size_t)'
+ 4414 | void oled_write_data(uint8_t* data, size_t len) {
+      |      ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:107:18: note: old declaration 'esp_err_t oled_write_data(uint8_t*, size_t)'
+  107 | static esp_err_t oled_write_data(uint8_t *data, size_t len) {
+      |                  ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void button_isr_handler(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:65:9: warning: unused variable 'time' [-Wunused-variable]
+   65 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:66:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   66 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void led_task(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:73:9: warning: unused variable 'time' [-Wunused-variable]
+   73 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:74:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+   74 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void screen_button_task(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:109:9: warning: unused variable 'time' [-Wunused-variable]
+  109 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:110:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+  110 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h: In function 'void step_forward(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h:38:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   38 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h: In function 'void step_backward(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h:95:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   95 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: At global scope:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:67:13: warning: 'wifi_connecting' defined but not used [-Wunused-variable]
+   67 | static bool wifi_connecting = false;
+      |             ^~~~~~~~~~~~~~~
+[8/13] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cc.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/main.cc.obj 
+ccache C:\Users\Administrator\.espressif\tools\xtensa-esp-elf\esp-14.2.0_20260121\xtensa-esp-elf\bin\xtensa-esp32-elf-g++.exe -DESP_PLATFORM -DIDF_VER=\"v5.5.4\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -IC:/Users/Administrator/Desktop/esp32/xlabbighomework/build/config -IC:/Users/Administrator/Desktop/esp32/xlabbighomework/main -IC:/esp/v5.5.4/esp-idf/components/newlib/platform_include -IC:/esp/v5.5.4/esp-idf/components/freertos/config/include -IC:/esp/v5.5.4/esp-idf/components/freertos/config/include/freertos -IC:/esp/v5.5.4/esp-idf/components/freertos/config/xtensa/include -IC:/esp/v5.5.4/esp-idf/components/freertos/FreeRTOS-Kernel/include -IC:/esp/v5.5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -IC:/esp/v5.5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -IC:/esp/v5.5.4/esp-idf/components/freertos/esp_additions/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/include/soc -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/include/soc/esp32 -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/dma/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/ldo/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/debug_probe/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/power_supply/include -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/port/esp32/. -IC:/esp/v5.5.4/esp-idf/components/esp_hw_support/port/esp32/include -IC:/esp/v5.5.4/esp-idf/components/heap/include -IC:/esp/v5.5.4/esp-idf/components/heap/tlsf -IC:/esp/v5.5.4/esp-idf/components/log/include -IC:/esp/v5.5.4/esp-idf/components/soc/include -IC:/esp/v5.5.4/esp-idf/components/soc/esp32 -IC:/esp/v5.5.4/esp-idf/components/soc/esp32/include -IC:/esp/v5.5.4/esp-idf/components/soc/esp32/register -IC:/esp/v5.5.4/esp-idf/components/hal/platform_port/include -IC:/esp/v5.5.4/esp-idf/components/hal/esp32/include -IC:/esp/v5.5.4/esp-idf/components/hal/include -IC:/esp/v5.5.4/esp-idf/components/esp_rom/include -IC:/esp/v5.5.4/esp-idf/components/esp_rom/esp32/include -IC:/esp/v5.5.4/esp-idf/components/esp_rom/esp32/include/esp32 -IC:/esp/v5.5.4/esp-idf/components/esp_rom/esp32 -IC:/esp/v5.5.4/esp-idf/components/esp_common/include -IC:/esp/v5.5.4/esp-idf/components/esp_system/include -IC:/esp/v5.5.4/esp-idf/components/esp_system/port/soc -IC:/esp/v5.5.4/esp-idf/components/esp_system/port/include/private -IC:/esp/v5.5.4/esp-idf/components/xtensa/esp32/include -IC:/esp/v5.5.4/esp-idf/components/xtensa/include -IC:/esp/v5.5.4/esp-idf/components/xtensa/deprecated_include -IC:/esp/v5.5.4/esp-idf/components/lwip/include -IC:/esp/v5.5.4/esp-idf/components/lwip/include/apps -IC:/esp/v5.5.4/esp-idf/components/lwip/include/apps/sntp -IC:/esp/v5.5.4/esp-idf/components/lwip/lwip/src/include -IC:/esp/v5.5.4/esp-idf/components/lwip/port/include -IC:/esp/v5.5.4/esp-idf/components/lwip/port/freertos/include -IC:/esp/v5.5.4/esp-idf/components/lwip/port/esp32xx/include -IC:/esp/v5.5.4/esp-idf/components/lwip/port/esp32xx/include/arch -IC:/esp/v5.5.4/esp-idf/components/lwip/port/esp32xx/include/sys -IC:/esp/v5.5.4/esp-idf/components/esp_driver_gpio/include -IC:/esp/v5.5.4/esp-idf/components/esp_pm/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/port/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/library -IC:/esp/v5.5.4/esp-idf/components/mbedtls/esp_crt_bundle/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m -IC:/esp/v5.5.4/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -IC:/esp/v5.5.4/esp-idf/components/esp_app_format/include -IC:/esp/v5.5.4/esp-idf/components/esp_bootloader_format/include -IC:/esp/v5.5.4/esp-idf/components/app_update/include -IC:/esp/v5.5.4/esp-idf/components/bootloader_support/include -IC:/esp/v5.5.4/esp-idf/components/bootloader_support/bootloader_flash/include -IC:/esp/v5.5.4/esp-idf/components/esp_partition/include -IC:/esp/v5.5.4/esp-idf/components/efuse/include -IC:/esp/v5.5.4/esp-idf/components/efuse/esp32/include -IC:/esp/v5.5.4/esp-idf/components/esp_mm/include -IC:/esp/v5.5.4/esp-idf/components/spi_flash/include -IC:/esp/v5.5.4/esp-idf/components/esp_security/include -IC:/esp/v5.5.4/esp-idf/components/pthread/include -IC:/esp/v5.5.4/esp-idf/components/esp_timer/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_gptimer/include -IC:/esp/v5.5.4/esp-idf/components/esp_ringbuf/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_spi/include -IC:/esp/v5.5.4/esp-idf/components/esp_psram/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_uart/include -IC:/esp/v5.5.4/esp-idf/components/vfs/include -IC:/esp/v5.5.4/esp-idf/components/app_trace/include -IC:/esp/v5.5.4/esp-idf/components/esp_event/include -IC:/esp/v5.5.4/esp-idf/components/nvs_flash/include -IC:/esp/v5.5.4/esp-idf/components/esp_phy/include -IC:/esp/v5.5.4/esp-idf/components/esp_phy/esp32/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_usb_serial_jtag/include -IC:/esp/v5.5.4/esp-idf/components/esp_vfs_console/include -IC:/esp/v5.5.4/esp-idf/components/esp_netif/include -IC:/esp/v5.5.4/esp-idf/components/wpa_supplicant/include -IC:/esp/v5.5.4/esp-idf/components/wpa_supplicant/port/include -IC:/esp/v5.5.4/esp-idf/components/wpa_supplicant/esp_supplicant/include -IC:/esp/v5.5.4/esp-idf/components/esp_coex/include -IC:/esp/v5.5.4/esp-idf/components/esp_wifi/include -IC:/esp/v5.5.4/esp-idf/components/esp_wifi/include/local -IC:/esp/v5.5.4/esp-idf/components/esp_wifi/wifi_apps/include -IC:/esp/v5.5.4/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -IC:/esp/v5.5.4/esp-idf/components/esp_gdbstub/include -IC:/esp/v5.5.4/esp-idf/components/unity/include -IC:/esp/v5.5.4/esp-idf/components/unity/unity/src -IC:/esp/v5.5.4/esp-idf/components/cmock/CMock/src -IC:/esp/v5.5.4/esp-idf/components/console -IC:/esp/v5.5.4/esp-idf/components/esp_driver_pcnt/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_mcpwm/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_ana_cmpr/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_i2s/include -IC:/esp/v5.5.4/esp-idf/components/sdmmc/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_sdmmc/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_sdspi/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_sdio/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_dac/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_bitscrambler/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_rmt/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_tsens/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_sdm/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_i2c/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_ledc/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_parlio/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_twai/include -IC:/esp/v5.5.4/esp-idf/components/driver/deprecated -IC:/esp/v5.5.4/esp-idf/components/driver/i2c/include -IC:/esp/v5.5.4/esp-idf/components/driver/touch_sensor/include -IC:/esp/v5.5.4/esp-idf/components/driver/twai/include -IC:/esp/v5.5.4/esp-idf/components/driver/touch_sensor/esp32/include -IC:/esp/v5.5.4/esp-idf/components/http_parser -IC:/esp/v5.5.4/esp-idf/components/esp-tls -IC:/esp/v5.5.4/esp-idf/components/esp-tls/esp-tls-crypto -IC:/esp/v5.5.4/esp-idf/components/esp_adc/include -IC:/esp/v5.5.4/esp-idf/components/esp_adc/interface -IC:/esp/v5.5.4/esp-idf/components/esp_adc/esp32/include -IC:/esp/v5.5.4/esp-idf/components/esp_adc/deprecated/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_isp/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_cam/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_cam/interface -IC:/esp/v5.5.4/esp-idf/components/esp_driver_jpeg/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_ppa/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_touch_sens/include -IC:/esp/v5.5.4/esp-idf/components/esp_driver_touch_sens/hw_ver1/include -IC:/esp/v5.5.4/esp-idf/components/esp_eth/include -IC:/esp/v5.5.4/esp-idf/components/esp_hal_ieee802154/include -IC:/esp/v5.5.4/esp-idf/components/esp_hid/include -IC:/esp/v5.5.4/esp-idf/components/tcp_transport/include -IC:/esp/v5.5.4/esp-idf/components/esp_http_client/include -IC:/esp/v5.5.4/esp-idf/components/esp_http_server/include -IC:/esp/v5.5.4/esp-idf/components/esp_https_ota/include -IC:/esp/v5.5.4/esp-idf/components/esp_https_server/include -IC:/esp/v5.5.4/esp-idf/components/esp_lcd/include -IC:/esp/v5.5.4/esp-idf/components/esp_lcd/interface -IC:/esp/v5.5.4/esp-idf/components/protobuf-c/protobuf-c -IC:/esp/v5.5.4/esp-idf/components/protocomm/include/common -IC:/esp/v5.5.4/esp-idf/components/protocomm/include/security -IC:/esp/v5.5.4/esp-idf/components/protocomm/include/transports -IC:/esp/v5.5.4/esp-idf/components/protocomm/include/crypto/srp6a -IC:/esp/v5.5.4/esp-idf/components/protocomm/proto-c -IC:/esp/v5.5.4/esp-idf/components/esp_local_ctrl/include -IC:/esp/v5.5.4/esp-idf/components/espcoredump/include -IC:/esp/v5.5.4/esp-idf/components/espcoredump/include/port/xtensa -IC:/esp/v5.5.4/esp-idf/components/wear_levelling/include -IC:/esp/v5.5.4/esp-idf/components/fatfs/diskio -IC:/esp/v5.5.4/esp-idf/components/fatfs/src -IC:/esp/v5.5.4/esp-idf/components/fatfs/vfs -IC:/esp/v5.5.4/esp-idf/components/idf_test/include -IC:/esp/v5.5.4/esp-idf/components/idf_test/include/esp32 -IC:/esp/v5.5.4/esp-idf/components/ieee802154/include -IC:/esp/v5.5.4/esp-idf/components/json/cJSON -IC:/esp/v5.5.4/esp-idf/components/mqtt/esp-mqtt/include -IC:/esp/v5.5.4/esp-idf/components/nvs_sec_provider/include -IC:/esp/v5.5.4/esp-idf/components/perfmon/include -IC:/esp/v5.5.4/esp-idf/components/rt/include -IC:/esp/v5.5.4/esp-idf/components/spiffs/include -IC:/esp/v5.5.4/esp-idf/components/wifi_provisioning/include @"C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/toolchain/cxxflags" -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=C:/Users/Administrator/Desktop/esp32/xlabbighomework=. -fmacro-prefix-map=C:/esp/v5.5.4/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu++2b -fno-exceptions -fuse-cxa-atexit -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/main.cc.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\main.cc.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/main.cc.obj -c C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:16,
+                 from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h:8,
+                 from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:15:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:61:20: error: redefinition of 'const char* TAG'
+   61 | static const char *TAG = "ESP32_SCREEN";
+      |                    ^~~
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/uart.h:9,
+                 from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:14:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/init.h:3:20: note: 'const char* TAG' previously defined here
+    3 | static const char *TAG = "zjhnb";
+      |                    ^~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void oled_init2()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:128:9: error: either all initializer clauses should be designated or none of them should be
+  128 |         .master.clk_speed = OLED_I2C_FREQ_HZ,
+      |         ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:128:9: error: expected primary-expression before '.' token
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void switch_to_next_wifi()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:206:13: error: expected primary-expression before '.' token
+  206 |             .threshold.authmode = WIFI_AUTH_WPA2_PSK,
+      |             ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void wifi_init_sta()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:280:13: error: expected primary-expression before '.' token
+  280 |             .threshold.authmode = WIFI_AUTH_WPA2_PSK,
+      |             ^
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:17:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h: At global scope:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4402:6: error: ambiguating new declaration of 'void oled_write_cmd(uint8_t)'
+ 4402 | void oled_write_cmd(uint8_t cmd) {
+      |      ^~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:95:18: note: old declaration 'esp_err_t oled_write_cmd(uint8_t)'
+   95 | static esp_err_t oled_write_cmd(uint8_t cmd) {
+      |                  ^~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4414:6: error: ambiguating new declaration of 'void oled_write_data(uint8_t*, size_t)'
+ 4414 | void oled_write_data(uint8_t* data, size_t len) {
+      |      ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:107:18: note: old declaration 'esp_err_t oled_write_data(uint8_t*, size_t)'
+  107 | static esp_err_t oled_write_data(uint8_t *data, size_t len) {
+      |                  ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void button_isr_handler(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:65:9: warning: unused variable 'time' [-Wunused-variable]
+   65 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:66:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   66 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void led_task(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:73:9: warning: unused variable 'time' [-Wunused-variable]
+   73 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:74:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+   74 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h: In function 'void screen_button_task(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:109:9: warning: unused variable 'time' [-Wunused-variable]
+  109 |     int time = led1_config->time;
+      |         ^~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/gpio.h:110:9: warning: unused variable 'ledctrl' [-Wunused-variable]
+  110 |     int ledctrl = led1_config->ledctrl;
+      |         ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h: In function 'void step_forward(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h:38:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   38 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h: In function 'void step_backward(void*)':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/stepper.h:95:16: warning: unused variable 'gpio_num' [-Wunused-variable]
+   95 |     gpio_num_t gpio_num = led1_config->gpio_num;
+      |                ^~~~~~~~
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:16:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h: At global scope:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:2197:22: error: redefinition of 'const unsigned char* video_frames [2168]'
+ 2197 | const unsigned char* video_frames[VIDEO_FRAME_COUNT] = {
+      |                      ^~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:2197:22: note: 'const unsigned char* video_frames [2168]' previously defined here
+ 2197 | const unsigned char* video_frames[VIDEO_FRAME_COUNT] = {
+      |                      ^~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4382:6: error: redefinition of 'void i2c_master_init()'
+ 4382 | void i2c_master_init(void) {
+      |      ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4382:6: note: 'void i2c_master_init()' previously defined here
+ 4382 | void i2c_master_init(void) {
+      |      ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4402:6: error: ambiguating new declaration of 'void oled_write_cmd(uint8_t)'
+ 4402 | void oled_write_cmd(uint8_t cmd) {
+      |      ^~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:95:18: note: old declaration 'esp_err_t oled_write_cmd(uint8_t)'
+   95 | static esp_err_t oled_write_cmd(uint8_t cmd) {
+      |                  ^~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4414:6: error: ambiguating new declaration of 'void oled_write_data(uint8_t*, size_t)'
+ 4414 | void oled_write_data(uint8_t* data, size_t len) {
+      |      ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:107:18: note: old declaration 'esp_err_t oled_write_data(uint8_t*, size_t)'
+  107 | static esp_err_t oled_write_data(uint8_t *data, size_t len) {
+      |                  ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4434:6: error: redefinition of 'void oled_init()'
+ 4434 | void oled_init(void) {
+      |      ^~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4434:6: note: 'void oled_init()' previously defined here
+ 4434 | void oled_init(void) {
+      |      ^~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4469:6: error: redefinition of 'void oled_display_frame(const unsigned char*)'
+ 4469 | void oled_display_frame(const unsigned char* frame_data) {
+      |      ^~~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4469:6: note: 'void oled_display_frame(const unsigned char*)' previously defined here
+ 4469 | void oled_display_frame(const unsigned char* frame_data) {
+      |      ^~~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4481:6: error: redefinition of 'void oled_test_pattern(void*)'
+ 4481 | void oled_test_pattern(void *pvParameters) {
+      |      ^~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4481:6: note: 'void oled_test_pattern(void*)' previously defined here
+ 4481 | void oled_test_pattern(void *pvParameters) {
+      |      ^~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4497:6: error: redefinition of 'void video_player_task(void*)'
+ 4497 | void video_player_task(void *pvParameters) {
+      |      ^~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/oled.h:4497:6: note: 'void video_player_task(void*)' previously defined here
+ 4497 | void video_player_task(void *pvParameters) {
+      |      ^~~~~~~~~~~~~~~~~
+In file included from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:17:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:26:3: error: conflicting declaration 'typedef struct wifi_config_item_t wifi_config_item_t'
+   26 | } wifi_config_item_t;
+      |   ^~~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:26:3: note: previous declaration as 'typedef struct wifi_config_item_t wifi_config_item_t'
+   26 | } wifi_config_item_t;
+      |   ^~~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:28:33: error: redefinition of 'const wifi_config_item_t wifi_list []'
+   28 | static const wifi_config_item_t wifi_list[] = {
+      |                                 ^~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:28:33: note: 'const wifi_config_item_t wifi_list [3]' previously defined here
+   28 | static const wifi_config_item_t wifi_list[] = {
+      |                                 ^~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:61:20: error: redefinition of 'const char* TAG'
+   61 | static const char *TAG = "ESP32_SCREEN";
+      |                    ^~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/init.h:3:20: note: 'const char* TAG' previously defined here
+    3 | static const char *TAG = "zjhnb";
+      |                    ^~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:62:16: error: redefinition of 'uint8_t image_buffer [512]'
+   62 | static uint8_t image_buffer[IMAGE_BUFFER_SIZE];
+      |                ^~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:62:16: note: 'uint8_t image_buffer [512]' previously declared here
+   62 | static uint8_t image_buffer[IMAGE_BUFFER_SIZE];
+      |                ^~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:63:27: error: redefinition of 'EventGroupDef_t* wifi_event_group'
+   63 | static EventGroupHandle_t wifi_event_group;
+      |                           ^~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:63:27: note: 'EventGroupDef_t* wifi_event_group' previously declared here
+   63 | static EventGroupHandle_t wifi_event_group;
+      |                           ^~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:64:11: error: redefinition of 'const int WIFI_CONNECTED_BIT'
+   64 | const int WIFI_CONNECTED_BIT = BIT0;
+      |           ^~~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:64:11: note: 'const int WIFI_CONNECTED_BIT' previously defined here
+   64 | const int WIFI_CONNECTED_BIT = BIT0;
+      |           ^~~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:65:12: error: redefinition of 'int current_wifi_index'
+   65 | static int current_wifi_index = 0;      // 当前尝试的WiFi索引
+      |            ^~~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:65:12: note: 'int current_wifi_index' previously defined here
+   65 | static int current_wifi_index = 0;      // 当前尝试的WiFi索引
+      |            ^~~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:66:12: error: redefinition of 'int retry_count'
+   66 | static int retry_count = 0;
+      |            ^~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:66:12: note: 'int retry_count' previously defined here
+   66 | static int retry_count = 0;
+      |            ^~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:67:13: error: redefinition of 'bool wifi_connecting'
+   67 | static bool wifi_connecting = false;
+      |             ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:67:13: note: 'bool wifi_connecting' previously defined here
+   67 | static bool wifi_connecting = false;
+      |             ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:73:3: error: conflicting declaration 'typedef struct oled_cmd_t oled_cmd_t'
+   73 | } oled_cmd_t;
+      |   ^~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:73:3: note: previous declaration as 'typedef struct oled_cmd_t oled_cmd_t'
+   73 | } oled_cmd_t;
+      |   ^~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:76:25: error: redefinition of 'const oled_cmd_t oled_init_cmds []'
+   76 | static const oled_cmd_t oled_init_cmds[] = {
+      |                         ^~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:76:25: note: 'const oled_cmd_t oled_init_cmds [25]' previously defined here
+   76 | static const oled_cmd_t oled_init_cmds[] = {
+      |                         ^~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:95:18: error: redefinition of 'esp_err_t oled_write_cmd(uint8_t)'
+   95 | static esp_err_t oled_write_cmd(uint8_t cmd) {
+      |                  ^~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:95:18: note: 'esp_err_t oled_write_cmd(uint8_t)' previously defined here
+   95 | static esp_err_t oled_write_cmd(uint8_t cmd) {
+      |                  ^~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:107:18: error: redefinition of 'esp_err_t oled_write_data(uint8_t*, size_t)'
+  107 | static esp_err_t oled_write_data(uint8_t *data, size_t len) {
+      |                  ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:107:18: note: 'esp_err_t oled_write_data(uint8_t*, size_t)' previously defined here
+  107 | static esp_err_t oled_write_data(uint8_t *data, size_t len) {
+      |                  ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:119:6: error: redefinition of 'void oled_init2()'
+  119 | void oled_init2(void) {
+      |      ^~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:119:6: note: 'void oled_init2()' previously defined here
+  119 | void oled_init2(void) {
+      |      ^~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void oled_init2()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:128:9: error: either all initializer clauses should be designated or none of them should be
+  128 |         .master.clk_speed = OLED_I2C_FREQ_HZ,
+      |         ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:128:9: error: expected primary-expression before '.' token
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: At global scope:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:151:6: error: redefinition of 'void oled_display_image(uint8_t*)'
+  151 | void oled_display_image(uint8_t *buffer) {
+      |      ^~~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:151:6: note: 'void oled_display_image(uint8_t*)' previously defined here
+  151 | void oled_display_image(uint8_t *buffer) {
+      |      ^~~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:160:6: error: redefinition of 'void oled_display_text(const char*, const char*)'
+  160 | void oled_display_text(const char* line1, const char* line2) {
+      |      ^~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:160:6: note: 'void oled_display_text(const char*, const char*)' previously defined here
+  160 | void oled_display_text(const char* line1, const char* line2) {
+      |      ^~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:190:6: error: redefinition of 'void switch_to_next_wifi()'
+  190 | void switch_to_next_wifi(void) {
+      |      ^~~~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:190:6: note: 'void switch_to_next_wifi()' previously defined here
+  190 | void switch_to_next_wifi(void) {
+      |      ^~~~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void switch_to_next_wifi()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:206:13: error: expected primary-expression before '.' token
+  206 |             .threshold.authmode = WIFI_AUTH_WPA2_PSK,
+      |             ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: At global scope:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:217:6: error: redefinition of 'void wifi_event_handler(void*, esp_event_base_t, int32_t, void*)'
+  217 | void wifi_event_handler(void* arg, esp_event_base_t event_base,
+      |      ^~~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:217:6: note: 'void wifi_event_handler(void*, esp_event_base_t, int32_t, void*)' previously defined here
+  217 | void wifi_event_handler(void* arg, esp_event_base_t event_base,
+      |      ^~~~~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:254:6: error: redefinition of 'void wifi_init_sta()'
+  254 | void wifi_init_sta(void) {
+      |      ^~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:254:6: note: 'void wifi_init_sta()' previously defined here
+  254 | void wifi_init_sta(void) {
+      |      ^~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: In function 'void wifi_init_sta()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:280:13: error: expected primary-expression before '.' token
+  280 |             .threshold.authmode = WIFI_AUTH_WPA2_PSK,
+      |             ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: At global scope:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:296:6: error: redefinition of 'void tcp_client_task(void*)'
+  296 | void tcp_client_task(void *pvParameters) {
+      |      ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:296:6: note: 'void tcp_client_task(void*)' previously defined here
+  296 | void tcp_client_task(void *pvParameters) {
+      |      ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc: In function 'void app_main()':
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:89:5: warning: missing initializer for member 'uart_config_t::rx_flow_ctrl_thresh' [-Wmissing-field-initializers]
+   89 |     };
+      |     ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:89:5: warning: missing initializer for member 'uart_config_t::flags' [-Wmissing-field-initializers]
+In file included from C:/esp/v5.5.4/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:12,
+                 from C:/esp/v5.5.4/esp-idf/components/esp_hw_support/include/esp_cpu.h:21,
+                 from C:/esp/v5.5.4/esp-idf/components/esp_hw_support/include/spinlock.h:11,
+                 from C:/esp/v5.5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:49,
+                 from C:/esp/v5.5.4/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:57,
+                 from C:/esp/v5.5.4/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:69,
+                 from C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:7:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:100:34: error: void value not ignored as it ought to be
+  100 |     ESP_ERROR_CHECK(wifi_init_sta());
+C:/esp/v5.5.4/esp-idf/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:57:16: warning: unused variable 'led_close' [-Wunused-variable]
+   57 |     led_config led_close = {
+      |                ^~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:62:16: warning: unused variable 'led_use' [-Wunused-variable]
+   62 |     led_config led_use = {
+      |                ^~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:67:16: warning: unused variable 'stepper_config1' [-Wunused-variable]
+   67 |     led_config stepper_config1 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
+      |                ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:72:16: warning: unused variable 'stepper_config2' [-Wunused-variable]
+   72 |     led_config stepper_config2 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
+      |                ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/main.cc:77:16: warning: unused variable 'stepper_config3' [-Wunused-variable]
+   77 |     led_config stepper_config3 = {//这里传参数复用了led_config结构体，.ledctrl，表示循环圈数,.time按照两位数分割分别表示4个GPIO引脚，。
+      |                ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h: At global scope:
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:107:18: warning: 'esp_err_t oled_write_data(uint8_t*, size_t)' defined but not used [-Wunused-function]
+  107 | static esp_err_t oled_write_data(uint8_t *data, size_t len) {
+      |                  ^~~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:95:18: warning: 'esp_err_t oled_write_cmd(uint8_t)' defined but not used [-Wunused-function]
+   95 | static esp_err_t oled_write_cmd(uint8_t cmd) {
+      |                  ^~~~~~~~~~~~~~
+C:/Users/Administrator/Desktop/esp32/xlabbighomework/main/esp32_screen.h:67:13: warning: 'wifi_connecting' defined but not used [-Wunused-variable]
+   67 | static bool wifi_connecting = false;
+      |             ^~~~~~~~~~~~~~~
+ninja: build stopped: subcommand failed.
