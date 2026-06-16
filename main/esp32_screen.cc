@@ -3,6 +3,7 @@ extern "C"
 #include "esp32_screen.h"
 
 
+
 static uint8_t image_buffer[IMAGE_BUFFER_SIZE];
 
 // OLED命令结构体
@@ -118,7 +119,7 @@ void oled_display_text(const char* line1, const char* line2) {
 
 void tcp_client_task(void *pvParameters) {
     char rx_buffer[128];
-    
+    EventBits_t bits;
     while (1) {
         xEventGroupWaitBits(wifi_event_group, WIFI_CONNECTED_BIT, pdFALSE, pdFALSE, portMAX_DELAY);
         
@@ -154,12 +155,23 @@ void tcp_client_task(void *pvParameters) {
         oled_display_text("Connected!", "Receiving...");
         
         while (1) {
+             bits = xEventGroupWaitBits(wifi_event_group, 
+                                   WIFI_CONNECTED_BIT | TASK_STOP_BIT,
+                                   pdFALSE, pdFALSE, portMAX_DELAY);
+        
+                // 检查是否收到停止信号
+                if (bits & TASK_STOP_BIT) {
+                    ESP_LOGI(TAG, "任务收到停止信号");
+                    break;
+                }
+            ESP_LOGI(TAG, "1");
             uint8_t len_buf[2];
             int len_recv = recv(sock, len_buf, 2, 0);
             if (len_recv <= 0) {
                 ESP_LOGW(TAG, "服务器断开连接");
                 break;
             }
+           
             
             uint16_t data_len = (len_buf[0] << 8) | len_buf[1];
             
@@ -184,10 +196,21 @@ void tcp_client_task(void *pvParameters) {
                 oled_display_image(image_buffer);
             }
         }
-        
+
+       
         close(sock);
+        if (xEventGroupGetBits(wifi_event_group) & TASK_STOP_BIT) {
+            ESP_LOGI(TAG, "任务收到停止信号2");
+           
+            break;
+        }
         oled_display_text("Disconnected", "Reconnecting...");
         vTaskDelay(pdMS_TO_TICKS(5000));
-    }
+
+    } vTaskDelete(NULL);/*
+    while (1){
+         ESP_LOGI(TAG, "停止...");
+         vTaskDelay(pdMS_TO_TICKS(100));
+    };*/
 }
 }

@@ -35,6 +35,7 @@ extern "C" {
 #define SCREEN_HEIGHT 64
 #define SCREEN_PAGES (SCREEN_HEIGHT / 8)
 #define IMAGE_BUFFER_SIZE (SCREEN_WIDTH * SCREEN_PAGES)
+#define TASK_STOP_BIT (1 << 2)
 
 // 服务器配置
 #define SERVER_HOST "www.fatsilkworm.top"

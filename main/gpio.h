@@ -106,10 +106,14 @@ void screen_button_task(void *pvParameters)
                 oled_state = !oled_state;
                 if(oled_state){
                     vTaskDelete(Task2);
+                    xEventGroupClearBits(wifi_event_group, TASK_STOP_BIT);
+                    vTaskDelay(pdMS_TO_TICKS(50));
                     xTaskCreate(tcp_client_task, "tcp_client", 8192, NULL, 5, &Task1);
 
                 }else{
-                    vTaskDelete(Task1);
+                    xEventGroupSetBits(wifi_event_group, TASK_STOP_BIT);
+                    vTaskDelay(pdMS_TO_TICKS(50));
+                    //vTaskDelete(Task1);
                     xTaskCreate(video_player_task, "video_player", 8192, NULL, 5, &Task2);//视频播放任务
                 }
                 printf("Button pressed! 2");

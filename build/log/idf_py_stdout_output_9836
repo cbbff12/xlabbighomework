@@ -1,0 +1,95 @@
+Command: ninja flash
+[1/6] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Administrator\Desktop\esp32\xlabbighomework\build && C:\Users\Administrator\.espressif\python_env\idf5.5_py3.14_env\Scripts\python.exe C:/esp/v5.5.4/esp-idf/components/spiffs/spiffsgen.py 0x19000 C:/Users/Administrator/Desktop/esp32/xlabbighomework/spiffs_data C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/spiffs.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
+[2/6] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\esp-idf\esptool_py && C:\Users\Administrator\.espressif\python_env\idf5.5_py3.14_env\Scripts\python.exe C:/esp/v5.5.4/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/partition_table/partition-table.bin C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/xlabhomework1.bin"
+xlabhomework1.bin binary size 0x2e3e20 bytes. Smallest app partition is 0x3b6000 bytes. 0xd21e0 bytes (22%) free.
+[3/6] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Administrator\Desktop\esp32\xlabbighomework\build\bootloader\esp-idf\esptool_py && C:\Users\Administrator\.espressif\python_env\idf5.5_py3.14_env\Scripts\python.exe C:/esp/v5.5.4/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/Administrator/Desktop/esp32/xlabbighomework/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6630 bytes. 0x9d0 bytes (9%) free.
+[4/6] No install step for 'bootloader'
+[5/6] Completed 'bootloader'
+[5/6] C:\Windows\system32\cmd.exe /C "cd /D C:\esp\v5.5.4\esp-idf\components\esptool_py && C:\Users\Administrator\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/esp/v5.5.4/esp-idf -D SERIAL_TOOL=C:/Users/Administrator/.espressif/python_env/idf5.5_py3.14_env/Scripts/python.exe;;C:/esp/v5.5.4/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/Administrator/Desktop/esp32/xlabbighomework/build -P C:/esp/v5.5.4/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM13 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x20000 xlabhomework1.bin 0x8000 partition_table/partition-table.bin 0x11000 ota_data_initial.bin 0x3d6000 spiffs.bin
+esptool.py v4.12.dev1
+Serial port COM13
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 8c:94:df:93:df:dc
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00020000 to 0x00303fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x00011000 to 0x00012fff...
+Flash will be erased from 0x003d6000 to 0x003eefff...
+SHA digest in image updated
+Compressed 26160 bytes to 16518...
+Writing at 0x00001000... (50 %)
+Writing at 0x00007572... (100 %)
+Wrote 26160 bytes (16518 compressed) at 0x00001000 in 0.9 seconds (effective 241.1 kbit/s)...
+Hash of data verified.
+Compressed 3030560 bytes to 677567...
+Writing at 0x00020000... (2 %)
+Writing at 0x0002c8e9... (4 %)
+Writing at 0x00058f5b... (7 %)
+Writing at 0x00093040... (9 %)
+Writing at 0x000be31c... (11 %)
+Writing at 0x000ebb39... (14 %)
+Writing at 0x0012303d... (16 %)
+Writing at 0x00159fca... (19 %)
+Writing at 0x001909c2... (21 %)
+Writing at 0x001c6ea3... (23 %)
+Writing at 0x001fda3c... (26 %)
+Writing at 0x002382bd... (28 %)
+Writing at 0x00252691... (30 %)
+Writing at 0x0025c1d9... (33 %)
+Writing at 0x00264220... (35 %)
+Writing at 0x00269c99... (38 %)
+Writing at 0x0026fe30... (40 %)
+Writing at 0x0027578d... (42 %)
+Writing at 0x0027b2ec... (45 %)
+Writing at 0x00280fe4... (47 %)
+Writing at 0x00286a9f... (50 %)
+Writing at 0x0028ca19... (52 %)
+Writing at 0x00292972... (54 %)
+Writing at 0x00298d68... (57 %)
+Writing at 0x0029e329... (59 %)
+Writing at 0x002a369b... (61 %)
+Writing at 0x002a9396... (64 %)
+Writing at 0x002aee6a... (66 %)
+Writing at 0x002b46a0... (69 %)
+Writing at 0x002b9fb2... (71 %)
+Writing at 0x002bfd28... (73 %)
+Writing at 0x002c5755... (76 %)
+Writing at 0x002cb2ef... (78 %)
+Writing at 0x002d0f97... (80 %)
+Writing at 0x002d6894... (83 %)
+Writing at 0x002dd8f8... (85 %)
+Writing at 0x002e4f64... (88 %)
+Writing at 0x002ead69... (90 %)
+Writing at 0x002f099c... (92 %)
+Writing at 0x002f64a1... (95 %)
+Writing at 0x002fc475... (97 %)
+Writing at 0x003018d9... (100 %)
+Wrote 3030560 bytes (677567 compressed) at 0x00020000 in 28.2 seconds (effective 859.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 135...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (135 compressed) at 0x00008000 in 0.1 seconds (effective 246.3 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x00011000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x00011000 in 0.1 seconds (effective 475.2 kbit/s)...
+Hash of data verified.
+Compressed 102400 bytes to 276...
+Writing at 0x003d6000... (100 %)
+Wrote 102400 bytes (276 compressed) at 0x003d6000 in 1.0 seconds (effective 780.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

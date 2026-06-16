@@ -4500,9 +4500,10 @@ void video_player_task(void *pvParameters) {
     int frame_index = 0;
     TickType_t last_frame_time = xTaskGetTickCount();
     const TickType_t frame_duration = pdMS_TO_TICKS(100); // 约10fps
-    
+    int a=0;
     while (1) {
         // 显示当前帧
+        
         oled_display_frame(video_frames[frame_index]);//frame_index
         //oled_test_pattern(NULL);
         // 控制帧率
@@ -4510,10 +4511,15 @@ void video_player_task(void *pvParameters) {
         //printf("%03d", frame_index);
         // 下一帧
         frame_index++;
+        a++;
         if (frame_index >= VIDEO_FRAME_COUNT) {
             frame_index = 0; // 循环播放
             vTaskDelay(pdMS_TO_TICKS(1000));
             ESP_LOGI(TAG, "Video loop completed, restarting...");
+        }
+        if(a==10){
+            ESP_LOGI(TAG, "10 frames");
+            a=0;
         }
     }
 }
