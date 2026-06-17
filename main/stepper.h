@@ -7,6 +7,10 @@
 #include "init.h"
 #include "esp_task_wdt.h"
 #include "soc/gpio_num.h"
+#include "esp_sntp.h"
+#include <time.h>
+#include <sys/time.h>
+#include "esp_log.h"
 /*
 #define IN1_PIN GPIO_NUM_21
 #define IN2_PIN GPIO_NUM_19
@@ -57,7 +61,7 @@ void step_forward(void *pvParameters) {
     gpio_num_t IN2_PIN = gpio_list[led1_config->time/100%100];
     gpio_num_t IN3_PIN = gpio_list[led1_config->time/10000%100];
     gpio_num_t IN4_PIN = gpio_list[led1_config->time/1000000];
-    printf("step_forward_start\n");
+    ESP_LOGI(TAG, "step_forward_start");
     for(int i = 0; i < steps; i++){
 
     gpio_set_level(IN1_PIN, 1); gpio_set_level(IN2_PIN, 0);
@@ -102,7 +106,7 @@ void step_forward(void *pvParameters) {
     taskYIELD();
     }
     vTaskDelay(pdMS_TO_TICKS(10));
-    printf("step_forward_end\n");
+    ESP_LOGI(TAG, "step_forward_end");
     vTaskDelete(NULL);
 
 }
@@ -115,7 +119,7 @@ void step_backward(void *pvParameters) {
     gpio_num_t IN3_PIN = gpio_list[led1_config->time/10000%100];
     gpio_num_t IN4_PIN = gpio_list[led1_config->time/1000000];
     int i = 0;
-    printf("step_backward_start\n");
+    ESP_LOGI(TAG, "step_backward_start");
     for(i = 0; i < steps; i++){
         
     gpio_set_level(IN1_PIN, 1); gpio_set_level(IN2_PIN, 0);
@@ -160,7 +164,66 @@ void step_backward(void *pvParameters) {
     taskYIELD();
     }
     vTaskDelay(pdMS_TO_TICKS(10));
-    
-    printf("step_backward_end\n");
+    ESP_LOGI(TAG, "step_backward_end");
     vTaskDelete(NULL);
+}
+int lasthour = 0;
+int lastminute =  0;
+void step_time(void *pvParameters){
+    led_config stepper_config[6]={{.gpio_num = GPIO_NUM_21,
+        .time = 32332526,
+        .ledctrl = 43,},{.gpio_num = GPIO_NUM_21,
+        .time = 27141213,
+        .ledctrl = 43,},{.gpio_num = GPIO_NUM_21,
+        .time = 21191805,
+        .ledctrl = 43,},{.gpio_num = GPIO_NUM_21,
+        .time = 32332526,
+        .ledctrl = 42,},{.gpio_num = GPIO_NUM_21,
+        .time = 27141213,
+        .ledctrl = 297,},{.gpio_num = GPIO_NUM_21,
+        .time = 21191805,
+        .ledctrl = 125,}};
+    while(1){
+        time_t now;
+    struct tm timeinfo;
+
+    // 1. 获取当前时间戳（秒）
+    time(&now);
+
+    // 2. 转换为本地时间结构体
+    //    注意：请确保之前已经调用过 setenv("TZ", "CST-8", 1) 和 tzset() 设置了时区
+    localtime_r(&now, &timeinfo);
+
+    // 3. 直接读取 int 类型的小时和分钟
+    int hour = timeinfo.tm_hour;   // 范围 0-23
+    int minute = timeinfo.tm_min;  // 范围 0-59
+        if(hour != lasthour){
+            lasthour = hour;
+            lastminute = minute;
+            //oled_display_text("当前时间", " %d点%d分", hour, minute);
+            if(hour%3){
+                xTaskCreate(step_forward, "step_forward1", 4096, (void *)&stepper_config[0], 5, NULL);
+            }else{
+                xTaskCreate(step_forward, "step_forward2", 4096, (void *)&stepper_config[3], 5, NULL);
+            }
+        }
+        if(minute != lastminute){
+            lastminute = minute;
+           // oled_display_text("当前时间", " %d点%d分", hour, minute);
+            if(minute%10==0){
+                xTaskCreate(step_forward, "step_forward3", 4096, (void *)&stepper_config[5], 5, NULL);
+            }else{
+                xTaskCreate(step_forward, "step_forward4", 4096, (void *)&stepper_config[2], 5, NULL);
+            }
+            if(minute == 0){
+                xTaskCreate(step_forward, "step_forward5", 4096, (void *)&stepper_config[4], 5, NULL);
+                
+            }else if(minute % 10 ==0){
+                xTaskCreate(step_forward, "step_forward6", 4096, (void *)&stepper_config[1], 5, NULL);
+            }
+                       
+        }
+    //ESP_LOGI(TAG, "当前时间: %d点%d分", hour, minute);
+    vTaskDelay(pdMS_TO_TICKS(1000));
+    }
 }

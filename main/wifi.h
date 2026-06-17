@@ -14,7 +14,9 @@
 #include <lwip/err.h>
 #include <lwip/sockets.h>
 #include <lwip/netdb.h>
-
+#include "esp_sntp.h"
+#include <time.h>
+#include <sys/time.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

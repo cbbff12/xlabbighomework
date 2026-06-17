@@ -4518,7 +4518,7 @@ void video_player_task(void *pvParameters) {
             ESP_LOGI(TAG, "Video loop completed, restarting...");
         }
         if(a==10){
-            ESP_LOGI(TAG, "10 frames");
+            //ESP_LOGI(TAG, "10 frames");
             a=0;
         }
     }

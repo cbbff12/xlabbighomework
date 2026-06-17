@@ -164,7 +164,7 @@ void tcp_client_task(void *pvParameters) {
                     ESP_LOGI(TAG, "任务收到停止信号");
                     break;
                 }
-            ESP_LOGI(TAG, "1");
+            //ESP_LOGI(TAG, "1");
             uint8_t len_buf[2];
             int len_recv = recv(sock, len_buf, 2, 0);
             if (len_recv <= 0) {

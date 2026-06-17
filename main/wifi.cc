@@ -106,6 +106,12 @@ esp_err_t wifi_init_sta(void) {
     ESP_ERROR_CHECK(esp_wifi_start());
     
     ESP_LOGI(TAG, "WiFi初始化完成，将尝试连接 %d 个网络", WIFI_COUNT);
+    esp_sntp_setoperatingmode(ESP_SNTP_OPMODE_POLL);
+    esp_sntp_setservername(0, "pool.ntp.org"); // 你可以换成更快的服务器，如 "cn.pool.ntp.org"
+    esp_sntp_init();
+    setenv("TZ", "CST-8", 1);
+    tzset();
+    ESP_LOGI(TAG, "SNTP初始化完成");
     return ESP_OK;
 }
 }

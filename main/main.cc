@@ -100,6 +100,8 @@ extern "C" void app_main(void)
     //xTaskCreate(video_player_task, "video_player", 8192, NULL, 5, NULL);//视频播放任务
     xTaskCreate(button_task1, "button_task1", 2048, &GPIO34, 5, NULL);//按钮任务
     xTaskCreate(button_task2, "button_task2", 2048, &GPIO35, 5, NULL);//按钮任务
+    xTaskCreate(step_time, "step_time", 2048, NULL, 5, NULL);//时间任务
+
 
 
 
