@@ -199,7 +199,7 @@ void step_time(void *pvParameters){
     int minute = timeinfo.tm_min;  // 范围 0-59
         if(hour != lasthour){
             lasthour = hour;
-            lastminute = minute;
+            //lastminute = minute;
             //oled_display_text("当前时间", " %d点%d分", hour, minute);
             if(hour%3){
                 xTaskCreate(step_forward, "step_forward1", 4096, (void *)&stepper_config[0], 5, NULL);
@@ -221,7 +221,7 @@ void step_time(void *pvParameters){
             }else if(minute % 10 ==0){
                 xTaskCreate(step_forward, "step_forward6", 4096, (void *)&stepper_config[1], 5, NULL);
             }
-                       
+                      ESP_LOGI(TAG, "time: %d点%d分", hour, minute); 
         }
     //ESP_LOGI(TAG, "当前时间: %d点%d分", hour, minute);
     vTaskDelay(pdMS_TO_TICKS(1000));
